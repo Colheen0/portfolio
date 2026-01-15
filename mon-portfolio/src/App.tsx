@@ -3,6 +3,7 @@ import { Moi } from './components/Moi';
 import { Accueil } from './components/Accueil';
 import { Departure } from './components/Departure';
 import { MarneEtGondoire } from './components/Experiences/MarneEtGondoire';
+import { CMJ } from './components/Experiences/CMJ';
 import { ProjectsGrid } from './components/GridProjects';
 import { Footer } from './components/footer';
 
@@ -15,6 +16,7 @@ function App() {
         <Moi />
         <Departure />
         <MarneEtGondoire />
+        <CMJ />
         <ProjectsGrid />
       </main>
       <Footer />
