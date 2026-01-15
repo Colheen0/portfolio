@@ -1,6 +1,6 @@
-import { ProjectCard } from "./CardProject";
+import { ProjectCard } from "../CardProject";
 
-export const ProjectsGrid = () => {
+export const Scholar = () => {
   return (
     <section id="projets" className="py-24 px-6 bg-white">
       <div className="max-w-5xl mx-auto">

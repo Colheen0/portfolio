@@ -1,10 +1,12 @@
 import { Navbar } from './components/Navbar';
 import { Moi } from './components/Moi';
 import { Accueil } from './components/Accueil';
+import { Competences } from './components/Competences_passions/competences';
+import { Passions } from './components/Competences_passions/passions';
 import { Departure } from './components/Departure';
 import { MarneEtGondoire } from './components/Experiences/MarneEtGondoire';
 import { CMJ } from './components/Experiences/CMJ';
-import { ProjectsGrid } from './components/GridProjects';
+import { Scholar } from './components/Projects/Scholar';
 import { Footer } from './components/footer';
 
 function App() {
@@ -14,10 +16,13 @@ function App() {
       <main>
         <Accueil />
         <Moi />
+        <Competences />
+        <Passions />
         <Departure />
         <MarneEtGondoire />
         <CMJ />
-        <ProjectsGrid />
+        <Scholar />
+
       </main>
       <Footer />
     </div>
