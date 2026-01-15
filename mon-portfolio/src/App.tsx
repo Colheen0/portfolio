@@ -7,6 +7,7 @@ import { Departure } from './components/Departure';
 import { MarneEtGondoire } from './components/Experiences/MarneEtGondoire';
 import { CMJ } from './components/Experiences/CMJ';
 import { Scholar } from './components/Projects/Scholar';
+import { Other } from './components/Projects/Other';
 import { Footer } from './components/footer';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <MarneEtGondoire />
         <CMJ />
         <Scholar />
-
+        <Other />
       </main>
       <Footer />
     </div>
