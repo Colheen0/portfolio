@@ -99,13 +99,6 @@ export const MarneEtGondoire = () => {
               videoUrl="https://www.youtube.com/watch?v=JGuxagu_408" 
             />
           </div>
-          
-          {/* Barre de progression visuelle (décorative) */}
-          <div className="flex justify-center gap-2 mt-4">
-            <div className="w-12 h-1 bg-indigo-200 rounded-full overflow-hidden">
-              <div className="w-1/2 h-full bg-indigo-600 rounded-full animate-pulse"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

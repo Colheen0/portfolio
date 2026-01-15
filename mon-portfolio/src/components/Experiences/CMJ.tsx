@@ -59,13 +59,13 @@ export const CMJ = () => {
         <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide scroll-smooth outline-none">
             <CMJVignette 
                 title="Histoire de Gouvernes et ses habitants" 
-                thumbnail="/img/cmj-histoire.jpg" 
+                thumbnail="assets/img/CMJ.JPEG" 
                 videoSrc="#" 
                 isComingSoon={true} 
             />
             <CMJVignette 
                 title="Restauration : Salle de Cathéchèse" 
-                thumbnail="/img/cmj-salle.jpg" 
+                thumbnail="assets/img/salle.JPEG" 
                 videoSrc="#" 
                 isComingSoon={true} 
             />

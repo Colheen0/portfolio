@@ -35,9 +35,9 @@ export const Footer = () => {
 
           <div className="flex flex-col gap-4">
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Social</span>
-            <a href="https://linkedin.com" target="_blank" className="text-sm font-medium hover:text-indigo-600 transition-colors">LinkedIn</a>
-            <a href="https://github.com" target="_blank" className="text-sm font-medium hover:text-indigo-600 transition-colors">GitHub</a>
-            <a href="#" className="text-sm font-medium hover:text-indigo-600 transition-colors">Instagram</a>
+            <a href="https://www.linkedin.com/in/colheen-nkodia-diabat%C3%A9-001322296/" target="_blank" className="text-sm font-medium hover:text-indigo-600 transition-colors">LinkedIn</a>
+            <a href="https://github.com/Colheen0/" target="_blank" className="text-sm font-medium hover:text-indigo-600 transition-colors">GitHub</a>
+            <a href="https://www.instagram.com/nekhco?igsh=MW92OTBrY29kaTR6ag%3D%3D&utm_source=qr" className="text-sm font-medium hover:text-indigo-600 transition-colors">Instagram</a>
           </div>
 
           <div className="hidden md:flex flex-col gap-4 col-span-2 text-right">

@@ -58,12 +58,6 @@ export const Competences = () => {
                   </li>
                 ))}
               </ul>
-              {/* Lien vers projets futurs */}
-              {skill.category === "Post-Production" && (
-                <div className="mt-8 pt-6 border-t border-slate-100">
-                  <a href="#projets" className="text-xs font-bold text-indigo-600 hover:underline">Voir les projets associés →</a>
-                </div>
-              )}
             </div>
           ))}
         </div>
