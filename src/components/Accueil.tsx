@@ -78,7 +78,7 @@ export const Accueil = () => {
             {/* Conteneur de l'image */}
             <div className="relative rounded-[2.5rem] overflow-hidden rotate-2 border-4 border-white shadow-2xl w-64 md:w-[320px] lg:w-96 aspect-3/4">
               <img 
-                src="/assets/img/Moi1.jpeg" 
+                src="assets/img/moi1.jpeg" 
                 alt="Portrait"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

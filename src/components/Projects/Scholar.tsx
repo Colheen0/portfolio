@@ -20,7 +20,7 @@ export const Scholar = () => {
       description: "Projet de fin de première année.",
       fullContent: "Une plateforme complète de réservation développée pour apprendre la gestion de base de données et les interactions utilisateurs complexes.",
       tags: ['Javascript', 'CSS', 'HTML'],
-      image: "/assets/img/resakingdom.png",
+      image: "assets/img/resakingdom.png",
       link: "https://nkodiadiabate.butmmi.o2switch.site/resaweb/index.php"
     },
     {

@@ -102,13 +102,13 @@ export const CMJ = () => {
         >
             <CMJVignette 
                 title="Histoire de Gouvernes et ses habitants" 
-                thumbnail="assets/img/CMJ.JPEG" 
+                thumbnail="assets/img/cmj.jpeg" 
                 videoSrc="#" 
                 isComingSoon={true} 
             />
             <CMJVignette 
                 title="Restauration : Salle de Cathéchèse" 
-                thumbnail="assets/img/salle.JPEG" 
+                thumbnail="assets/img/salle.jpeg" 
                 videoSrc="#" 
                 isComingSoon={true} 
             />
