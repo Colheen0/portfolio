@@ -50,7 +50,8 @@ export const Footer = () => {
         {/* Copyright & Crédits */}
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-slate-400 font-medium">
-            © {currentYear} — Conçu et codé avec passion.
+            Colheen NKODIA-DIABATÉ - Développeur et Créatif Multimédia. <br />
+            © {currentYear} — Colheen NKODIA-DIABATÉ - Tous droits réservés.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-[10px] font-bold px-2 py-1 bg-slate-50 border border-slate-200 rounded text-slate-500">REACT</span>

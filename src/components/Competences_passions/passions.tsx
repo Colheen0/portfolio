@@ -90,15 +90,15 @@ export const Passions = () => {
         { 
           name: "New Girl", 
           image: "./assets/passions/New_girl.webp",
-          summary: "Une sitcom pétillante avec des personnages attachants et un humour percutant." 
+          summary: "C'est ce genre de série qui ont fait le pont entre mon enfance et adolescence, quand j'était petit les blagues me faisait rire mais je ne comprenais pas, à l'adolescence ma vision à changé et j'ai pu vraiment comprendre et apprécier les dialogues et l'histoire, c'était pas seulement des situations comiques c'était des histoires sur des jeunes gens qui font face à la vie."
         },
         { 
           name: "The Flash", 
           image: "./assets/passions/flash.webp",
-          summary: "Une aventure de super-héros mêlant voyages temporels et enjeux familiaux." 
+          summary: "Flash est mon super-héro préféré et c'est en grande partie grâce à cette série c'est par elle que mon amour pour le lore et les univers complexes est né, c'est sur cette série que j'ai fait mes premières histoires et que je me suis rendu compte que j'adorais écrire." 
         }
       ],
-      anecdote: "Hook est mon film de chevet pour tout ce qui touche au merveilleux. À l'opposé, l'écriture de New Girl m'inspire pour créer des dialogues dynamiques et attachants dans mes projets de fiction.",
+      anecdote: "Les contenue audiovisuel ont une place irremplacable dans ma vie notamment les films et les séries, créer des histoires aussi riches et créatives c'est vraiment un de mes buts dans la vie",
       color: "text-rose-600"
     }
   ];
@@ -142,7 +142,7 @@ export const Passions = () => {
             <span className="text-emerald-600">Passions</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
-            Découvrez les œuvres et les artistes qui nourrissent ma créativité au quotidien.
+            Ici je vous partages les œuvres et les artistes qui nourrissent ma créativité au quotidien.
           </p>
         </motion.div>
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion"; // Respect de la règle type-only import
+import type { Variants } from "framer-motion"; 
 
 export const Competences = () => {
   const skills = [
@@ -14,7 +14,7 @@ export const Competences = () => {
     {
       category: "Production Terrain",
       items: [
-        { name: "Cadrage & Lumière", detail: "Utilisation Sony FX30" },
+        { name: "Cadrage", detail: "Utilisation Sony FX30" },
         { name: "Installation Matériel", detail: "Setups vidéo complets" }
       ],
       color: "border-amber-500"
@@ -23,7 +23,7 @@ export const Competences = () => {
       category: "Design & Création",
       items: [
         { name: "Figma", detail: "Maquettage d'interfaces" },
-        { name: "Canva", detail: "Visuels réseaux sociaux" }
+        { name: "Canva", detail: "Présentation, création de documents" }
       ],
       color: "border-emerald-500"
     }
@@ -35,7 +35,7 @@ export const Competences = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, // Délai entre chaque carte
+        staggerChildren: 0.15,
       },
     },
   };
@@ -47,7 +47,7 @@ export const Competences = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Easing fluide professionnel
+        ease: [0.16, 1, 0.3, 1],
       },
     },
   };
@@ -87,13 +87,13 @@ export const Competences = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }} // Déclenchement dès que la grille apparaît
+          viewport={{ once: true, margin: "-50px" }} 
         >
           {skills.map((skill) => (
             <motion.div 
               key={skill.category} 
               variants={cardVariants}
-              whileHover={{ y: -10, transition: { duration: 0.3 } }} // Petit effet interactif au survol
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
               className={`bg-white p-8 rounded-3xl border-t-4 ${skill.color} shadow-sm hover:shadow-xl transition-shadow duration-300`}
             >
               <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-6">

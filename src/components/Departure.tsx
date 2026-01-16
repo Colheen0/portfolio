@@ -67,8 +67,8 @@ export const Departure = () => {
               variants={contentVariants}
               className="text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed"
             >
-              Un univers narratif où la fiction rencontre l'interactivité. Né d'une plume passionnée, 
-              illustré en collaboration et propulsé par un Visual Novel sous <strong>Ren'Py</strong>. 
+              Un univers narratif où la fiction rencontre l'interactivité. Créer par moi-même avec la participation d'amis, 
+              C'est un projet étendu sur plusieurs domaines : l'écriture, l'audiovisuel, la création d'un jeu vidéo et d'autres disciplines.
             </motion.p>
             
             <motion.div variants={contentVariants} className="flex flex-wrap gap-6 items-center">

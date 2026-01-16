@@ -67,7 +67,7 @@ export const Moi = () => {
                 <span className="text-lg">📍</span> Basé en Île-de-France
               </p>
               <p className="flex items-center gap-2 text-sm font-medium text-slate-600">
-                <span className="text-lg">🎂</span> 20 ans
+                <span className="text-lg">🎂</span> 20 ans (2005)
               </p>
               <p className="flex items-center gap-2 text-sm font-medium text-slate-600">
                 <span className="text-lg">🌍</span> Bi-national Français & Ivoirien
@@ -78,7 +78,7 @@ export const Moi = () => {
           {/* Bloc Bio & Parcours */}
           <motion.div variants={itemVariants}>
              <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium italic border-l-2 border-indigo-100 pl-4">
-               Étudiant passionné par la fusion entre le <strong>code</strong> et les <strong>arts visuels</strong>. 
+               Moi c'est Colheen je suis actuellement en 3ème année de BUT <strong>MMI</strong> (Metiers du multimédia et de l'internet) j'aime tout ce qui touche à la création notamment <strong>audiovisuel</strong> et <strong>l'écriture</strong>. 
                Je cherche à construire des ponts entre la technique et l'émotion.
             </p>
             

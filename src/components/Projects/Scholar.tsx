@@ -18,7 +18,7 @@ export const Scholar = () => {
     {
       title: "Site de réservation : RésaKingdom",
       description: "Projet de fin de première année.",
-      fullContent: "Une plateforme complète de réservation développée pour apprendre la gestion de base de données et les interactions utilisateurs complexes.",
+      fullContent: "Une plateforme complète de réservation développée pour apprendre la gestion de base de données et les interactions utilisateurs complexes(réalisé en première année).",
       tags: ['Javascript', 'CSS', 'HTML'],
       image: "assets/img/resakingdom.png",
       link: "https://nkodiadiabate.butmmi.o2switch.site/resaweb/index.php"
@@ -26,7 +26,7 @@ export const Scholar = () => {
     {
       title: "Portrait Chinois",
       description: "Expérience interactive en JS.",
-      fullContent: "Une expérience interactive qui révèle ma personnalité à travers des animations fluides et un code créatif en JS.",
+      fullContent: "Une expérience interactive qui révèle ma personnalité à travers des animations fluides et un code créatif en JS (réalisé en première année).",
       tags: ['Javascript', 'CSS Anim'],
       image: "assets/img/portrait-chinois.png",
       link: "https://colheen0.github.io/Sae-105-Portrait-Chinois/"
@@ -41,8 +41,8 @@ export const Scholar = () => {
     },
     {
       title: "Interview : Nicolas JEUNOT", 
-      description: "Maquettage UI/UX.",
-      fullContent: "Conception de l'interface utilisateur pour une application de gestion de tâches créatives.",
+      description: "Cadrage et montage.",
+      fullContent: "Réalisation d'un tournage en groupe où chaucun avait un rôle différent moi j'était le cadreur puis j'ai fait le montage (réalisé en première année).",
       tags: ['Premiere pro', 'cadrage'],
       image: "assets/img/interview.png",
       link: "https://youtu.be/dVMXyTlskA8"
