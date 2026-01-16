@@ -32,20 +32,20 @@ export const Passions = () => {
         { 
           name: "Percy Jackson & les Olympiens", 
           image: "./assets/passions/percy_jackson.webp",
-          summary: "Une relecture moderne et pleine d'humour de la mythologie grecque."
+          summary: "Je suis un amoureux de la mythologie grecque ! Alors une série de livre qui l'adapte de nos jours ? C'était fait pour moi ! J'ai vraiment adoré cette série dans son intégralité même si je l'ai découvert à l'âge adulte j'ai replongé en enfance et j'y ai trouvé des choses qui m'ont profondément marqué."
         },
         { 
           name: "Les Héros de l'Olympe", 
           image: "./assets/passions/les-heros-de-lolympe.webp",
-          summary: "Une suite épique qui approfondit l'univers avec de nouveaux personnages."
+          summary: "Plus de personnage, plus de lore, plus de mythologie, c'est une super suite que j'ai lu directement après avoir finis les tomes de percy jackson et ça à super bien marché sur moi j'ai retrouvé des personnages et j'en ai découvert des nouveaux, vraiment merci Rick Riordan."
         },
         { 
           name: "Contes de Fées (Stephen King)", 
           image: "./assets/passions/king-stephen-conte-de-fees.webp",
-          summary: "Un voyage sombre et fascinant dans un monde parallèle immersif."
+          summary: "Mon tout premier livre du maitre Stephen King. C'est son titre qui m'a intrigué, Stephen King le maître de l'horreur qui écrit un conte de fée ? C'était bizarre et honnêtement le voyage ne m'a pas du tout décu j'ai adoré, c'est très touchant comme récit et ça sort un peu de l'horreur cosmique des classiques de King et c'est pas plus mal."
         }
       ],
-      anecdote: "Rick Riordan est sans doute celui qui m'a donné l'envie de créer des univers étendus. J'adore la façon dont il modernise la mythologie, c'est une grande source d'inspiration pour le lore de Departure.",
+      anecdote: "Je me suis mis à lire des livres très tardivement en grande partie pour m'aider dans l'écriture de Departure et je ne m'attendais pas du tout à ce que j'ai trouvé, c'était comme découvrir un nouveau monde et ça m'a encore plus motiver à écrire Departure.",
       color: "text-emerald-600"
     },
     {
@@ -57,23 +57,23 @@ export const Passions = () => {
         { 
           name: "AJR", 
           image: "./assets/passions/AJR.webp",
-          summary: "Un mélange unique de pop, d'électro et de thèmes très humains.",
+          summary: "Je les ai découvert avec le film Soul de disney ils avaient fait une musique pour la bande annonce et la musique autant que le film m'ont marquer et depuis je les écoutes très régulièrement. Ils parlent de sujets qui touchent pas mal de gens dont moi et ça m'inspire beaucoup.",
           link: "https://spotify.com" 
         },
         { 
           name: "Megatera Zero", 
           image: "./assets/passions/Mega.webp",
-          summary: "Des covers puissantes avec une voix et une énergie incomparables.",
+          summary: "J'adore le japon et la musique en général et les groupes japonais sont vraiment à part : ça crie, ça hurle, ça parle de sujet simple mais avec tellement de puissance que ça en devient inspirant ça donne envie de chanter avec eux et Megatera Zero en est un parfait exemple.",
           link: "https://spotify.com"
         },
         { 
           name: "Lord Huron", 
           image: "./assets/passions/Lord_Huron.webp",
-          summary: "Une ambiance indie-folk cinématographique qui transporte ailleurs.",
+          summary: "Un peu comme AJR, Lord Huron c'est un artiste que j'ai découvert via une série (90% de mon spotify vient de série ou de tik tok) et là j'ai aussi été faciné comme pour AJR mais d'une manière différente : Lord Huron raconte des histoires dans ses musiques notamment l'album 'Lonesome dream' qui raconte une histoire d'amour et c'est super inspirant pour moi ça m'a montrer à quel points il y avait des manières différentes de raconter une histoire.",
           link: "https://spotify.com"
         }
       ],
-      anecdote: "La créativité de AJR dans leur production sonore me fascine, tandis que Lord Huron m'aide énormément à visualiser des ambiances pour mes montages vidéo grâce à leur côté narratif.",
+      anecdote: "C'est par la musique que j'ai commencé à créer Departure, je réfléchie constamment et la musique ça fait exploser mon imagination et les différentes scènes de Departure me sont venues grace à ça.",
       color: "text-blue-600"
     },
     {
@@ -85,7 +85,7 @@ export const Passions = () => {
         { 
           name: "Hook", 
           image: "./assets/passions/hook.webp",
-          summary: "Le film culte qui explore ce qu'il se passe quand Peter Pan grandit." 
+          summary: "C'est un film TYPIQUE de mon enfance, à l'époque où tout était simple et beau je me rappelle de la musique et des visuels qui sont juste époustouflants, je l'ai regardé il n'y a pas très longtemps par nostalgie et quelle claque ! Il y à une scène qui m'a rappeler mon enfance c'est le moment où Peter retourne au pays imaginaire et la c'était comme une explosion dans ma tête mon imagination qui bouillionais comme avant ça m'a fait chaud au coeur." 
         },
         { 
           name: "New Girl", 
