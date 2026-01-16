@@ -31,17 +31,17 @@ export const Passions = () => {
       details: [
         { 
           name: "Percy Jackson & les Olympiens", 
-          image: "../assets/passions/percy_jackson.webp",
+          image: "./assets/passions/percy_jackson.webp",
           summary: "Une relecture moderne et pleine d'humour de la mythologie grecque."
         },
         { 
           name: "Les Héros de l'Olympe", 
-          image: "../assets/passions/les-heros-de-lolympe.webp",
+          image: "./assets/passions/les-heros-de-lolympe.webp",
           summary: "Une suite épique qui approfondit l'univers avec de nouveaux personnages."
         },
         { 
           name: "Contes de Fées (Stephen King)", 
-          image: "../assets/passions/king-stephen-conte-de-fees.webp",
+          image: "./assets/passions/king-stephen-conte-de-fees.webp",
           summary: "Un voyage sombre et fascinant dans un monde parallèle immersif."
         }
       ],
@@ -56,19 +56,19 @@ export const Passions = () => {
       details: [
         { 
           name: "AJR", 
-          image: "../assets/passions/AJR.webp",
+          image: "./assets/passions/AJR.webp",
           summary: "Un mélange unique de pop, d'électro et de thèmes très humains.",
           link: "https://spotify.com" 
         },
         { 
           name: "Megatera Zero", 
-          image: "../assets/passions/Mega.webp",
+          image: "./assets/passions/Mega.webp",
           summary: "Des covers puissantes avec une voix et une énergie incomparables.",
           link: "https://spotify.com"
         },
         { 
           name: "Lord Huron", 
-          image: "../assets/passions/Lord_Huron.webp",
+          image: "./assets/passions/Lord_Huron.webp",
           summary: "Une ambiance indie-folk cinématographique qui transporte ailleurs.",
           link: "https://spotify.com"
         }
@@ -84,17 +84,17 @@ export const Passions = () => {
       details: [
         { 
           name: "Hook", 
-          image: "../assets/passions/hook.webp",
+          image: "./assets/passions/hook.webp",
           summary: "Le film culte qui explore ce qu'il se passe quand Peter Pan grandit." 
         },
         { 
           name: "New Girl", 
-          image: "../assets/passions/New_girl.webp",
+          image: "./assets/passions/New_girl.webp",
           summary: "Une sitcom pétillante avec des personnages attachants et un humour percutant." 
         },
         { 
           name: "The Flash", 
-          image: "../assets/passions/flash.webp",
+          image: "./assets/passions/flash.webp",
           summary: "Une aventure de super-héros mêlant voyages temporels et enjeux familiaux." 
         }
       ],

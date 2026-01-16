@@ -20,7 +20,7 @@ export const Scholar = () => {
       description: "Projet de fin de première année.",
       fullContent: "Une plateforme complète de réservation développée pour apprendre la gestion de base de données et les interactions utilisateurs complexes.",
       tags: ['Javascript', 'CSS', 'HTML'],
-      image: "../assets/img/resakingdom.png",
+      image: "assets/img/resakingdom.png",
       link: "https://nkodiadiabate.butmmi.o2switch.site/resaweb/index.php"
     },
     {
@@ -28,7 +28,7 @@ export const Scholar = () => {
       description: "Expérience interactive en JS.",
       fullContent: "Une expérience interactive qui révèle ma personnalité à travers des animations fluides et un code créatif en JS.",
       tags: ['Javascript', 'CSS Anim'],
-      image: "../assets/img/portrait-chinois.png",
+      image: "assets/img/portrait-chinois.png",
       link: "https://colheen0.github.io/Sae-105-Portrait-Chinois/"
     },
     {
@@ -36,7 +36,7 @@ export const Scholar = () => {
       description: "Création audio",
       fullContent: "Écriture et montage de la version anglaise d'une petite histoire humoristique sur un tableau (réalisé en 2ème année).",
       tags: ['Premiere pro', 'Adobe Audition'],
-      image: "../assets/img/les_joueur_de_cartes.jpeg",
+      image: "assets/img/les_joueur_de_cartes.jpeg",
       link: "https://open.spotify.com/episode/13d453maolPWGeXy5QIn8c?si=KKpgfY9ORHmJBPbuMVk-Vw&t=0&pi=Gu6AQzNYSHySB"
     },
     {
@@ -44,7 +44,7 @@ export const Scholar = () => {
       description: "Maquettage UI/UX.",
       fullContent: "Conception de l'interface utilisateur pour une application de gestion de tâches créatives.",
       tags: ['Premiere pro', 'cadrage'],
-      image: "../assets/img/interview.png",
+      image: "assets/img/interview.png",
       link: "https://youtu.be/dVMXyTlskA8"
     }
   ];
