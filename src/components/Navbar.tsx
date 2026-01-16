@@ -83,7 +83,7 @@ export const Navbar = () => {
 
           {/* LIEN VERS LE FOOTER (CONTACT) */}
           <NavHashLink 
-            smooth to="/#footer" 
+            smooth to="/#contact" 
             className="hover:text-indigo-600 transition-colors"
           >
             Contact
