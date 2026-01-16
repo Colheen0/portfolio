@@ -1,20 +1,33 @@
 import { useState } from 'react';
+import { NavHashLink } from 'react-router-hash-link'; 
 
 export const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Fonction pour fermer le menu quand on clique sur un lien
   const closeDropdown = () => setIsDropdownOpen(false);
 
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between font-medium">
+        
+        {/* Logo / Accueil */}
         <span className="font-black tracking-tighter text-xl">
-          <a href="#accueil" onClick={closeDropdown}>Accueil</a>
+          <NavHashLink smooth to="/#accueil" onClick={closeDropdown}>
+            Accueil
+          </NavHashLink>
         </span>
 
         <div className="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest text-slate-500">
-          <a href="#departure" className="hover:text-indigo-600 transition-colors">Departure</a>
+          
+          {/* LIEN VERS LA SECTION DEPARTURE (MODIFIÉ) */}
+          <NavHashLink 
+            smooth 
+            to="/#departure" 
+            onClick={closeDropdown}
+            className="hover:text-indigo-600 transition-colors"
+          >
+            Departure
+          </NavHashLink>
 
           {/* Menu Déroulant Projets */}
           <div 
@@ -35,40 +48,46 @@ export const Navbar = () => {
             {isDropdownOpen && (
               <div className="absolute top-full -left-4 pt-2 w-64 animate-in fade-in slide-in-from-top-2 duration-200">
                 <div className="bg-white border border-slate-100 shadow-xl rounded-2xl overflow-hidden py-2">
-                  <a 
-                    href="#marne-et-gondoire" 
+                  <NavHashLink 
+                    smooth to="/#marne-et-gondoire" 
                     onClick={closeDropdown}
                     className="block px-6 py-3 text-[10px] font-black hover:bg-slate-50 hover:text-indigo-600 transition-colors"
                   >
                     Marne et Gondoire
-                  </a>
-                  <a 
-                    href="#cmj" 
+                  </NavHashLink>
+                  <NavHashLink 
+                    smooth to="/#cmj" 
                     onClick={closeDropdown}
                     className="block px-6 py-3 text-[10px] font-black hover:bg-slate-50 hover:text-amber-600 transition-colors"
                   >
                     CMJ Governes
-                  </a>
-                  <a 
-                    href="#scholar" 
+                  </NavHashLink>
+                  <NavHashLink 
+                    smooth to="/#scholar" 
                     onClick={closeDropdown}
                     className="block px-6 py-3 text-[10px] font-black hover:bg-slate-50 hover:text-sky-500 transition-colors"
                   >
                     Travaux Scolaires
-                  </a>
-                  <a 
-                    href="#others" 
+                  </NavHashLink>
+                  <NavHashLink 
+                    smooth to="/#others" 
                     onClick={closeDropdown}
                     className="block px-6 py-3 text-[10px] font-black hover:bg-slate-50 hover:text-violet-600 transition-colors"
                   >
                     Projets Personnels
-                  </a>
+                  </NavHashLink>
                 </div>
               </div>
             )}
           </div>
 
-          <a href="#contact" className="hover:text-indigo-600 transition-colors">Contact</a>
+          {/* LIEN VERS LE FOOTER (CONTACT) */}
+          <NavHashLink 
+            smooth to="/#footer" 
+            className="hover:text-indigo-600 transition-colors"
+          >
+            Contact
+          </NavHashLink>
         </div>
       </div>
     </nav>

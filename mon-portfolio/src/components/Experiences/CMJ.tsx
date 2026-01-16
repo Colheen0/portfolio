@@ -1,14 +1,32 @@
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion"; // Obligatoire pour ta configuration TypeScript
+
 interface CMJVignetteProps {
   title: string;
   thumbnail: string;
   videoSrc: string;
-  isComingSoon?: boolean; // Nouvelle ligne
+  isComingSoon?: boolean;
 }
 
-//videoSrc à rajouter dans les props si besoin d'une vidéo
+// Variantes pour les vignettes individuelles
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: 20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1] // Easing fluide pro
+    }
+  }
+};
 
 const CMJVignette = ({ title, thumbnail, isComingSoon }: CMJVignetteProps) => (
-  <div className={`relative block overflow-hidden rounded-2xl bg-slate-100 aspect-video border border-slate-200 min-w-75 md:min-w-112.5 snap-center ${isComingSoon ? 'cursor-not-allowed' : 'group'}`}>
+  <motion.div 
+    variants={itemVariants}
+    whileHover={!isComingSoon ? { y: -5, scale: 1.02 } : {}} // Pas d'animation au survol si c'est "Coming Soon"
+    className={`relative block overflow-hidden rounded-2xl bg-slate-100 aspect-video border border-slate-200 min-w-75 md:min-w-112.5 snap-center transition-all duration-300 ${isComingSoon ? 'cursor-not-allowed' : 'group hover:shadow-xl'}`}
+  >
     {/* Image de miniature */}
     <img 
       src={thumbnail} 
@@ -29,15 +47,34 @@ const CMJVignette = ({ title, thumbnail, isComingSoon }: CMJVignetteProps) => (
     <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
       <p className="text-white text-xs font-bold uppercase tracking-wider">{title}</p>
     </div>
-  </div>
+  </motion.div>
 );
 
 export const CMJ = () => {
+  // Variantes pour la cascade des vignettes
+  const listVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      }
+    }
+  };
+
   return (
-    <section id="cmj" className="py-24 px-6 bg-white border-b border-slate-200">
+    <section id="cmj" className="py-24 px-6 bg-white border-b border-slate-200 overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        {/* En-tête */}
-        <div className="mb-12">
+        
+        {/* En-tête avec apparition au scroll */}
+        <motion.div 
+          className="mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="flex items-center gap-3 mb-6">
             <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-[10px] font-black uppercase tracking-widest">
               Engagement Local
@@ -53,10 +90,16 @@ export const CMJ = () => {
           <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
             Collaboration avec la municipalité de Governes pour la création de contenus mettant en valeur l'histoire du village et la préservation de son patrimoine.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Scroll horizontal */}
-        <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide scroll-smooth outline-none">
+        {/* Scroll horizontal avec animation de cascade */}
+        <motion.div 
+          className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide scroll-smooth outline-none"
+          variants={listVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
             <CMJVignette 
                 title="Histoire de Gouvernes et ses habitants" 
                 thumbnail="assets/img/CMJ.JPEG" 
@@ -69,7 +112,7 @@ export const CMJ = () => {
                 videoSrc="#" 
                 isComingSoon={true} 
             />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

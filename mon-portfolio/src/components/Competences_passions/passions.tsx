@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import type { Variants } from 'framer-motion'; // Import type pour la règle verbatimModuleSyntax
 
 interface InspirationItem {
   name: string;
   image: string;
   summary: string;
-  link?: string; // Nouveau : lien spécifique par item
+  link?: string;
 }
 
 interface Passion {
@@ -56,19 +58,19 @@ export const Passions = () => {
           name: "AJR", 
           image: "/assets/passions/AJR.webp",
           summary: "Un mélange unique de pop, d'électro et de thèmes très humains.",
-          link: "https://open.spotify.com/intl-fr/track/2wPL8Vh6lZ0DLaAw1N7Caj?si=c94977f3f7a345fb" 
+          link: "https://spotify.com" 
         },
         { 
           name: "Megatera Zero", 
           image: "/assets/passions/Mega.webp",
           summary: "Des covers puissantes avec une voix et une énergie incomparables.",
-          link: "https://open.spotify.com/intl-fr/track/1G9soUsxMgaOLeKAriEsbd?si=d9b952f5d0da437a"
+          link: "https://spotify.com"
         },
         { 
           name: "Lord Huron", 
           image: "/assets/passions/Lord_Huron.webp",
           summary: "Une ambiance indie-folk cinématographique qui transporte ailleurs.",
-          link: "https://open.spotify.com/intl-fr/track/54hj06Z7sm7DaHSrGGMAZG?si=478f8cb18ce64520"
+          link: "https://spotify.com"
         }
       ],
       anecdote: "La créativité de AJR dans leur production sonore me fascine, tandis que Lord Huron m'aide énormément à visualiser des ambiances pour mes montages vidéo grâce à leur côté narratif.",
@@ -101,10 +103,36 @@ export const Passions = () => {
     }
   ];
 
+  // Variantes d'animation
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    }
+  };
+
   return (
-    <section id="passions" className="py-24 px-6 bg-white">
+    <section id="passions" className="py-24 px-6 bg-white overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-16">
+        
+        {/* En-tête avec apparition au scroll */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="flex items-center gap-3 mb-6">
             <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-black uppercase tracking-widest">
               Univers Créatif
@@ -118,88 +146,108 @@ export const Passions = () => {
           <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
             Découvrez les œuvres et les artistes qui nourrissent ma créativité au quotidien.
           </p>
-        </div>        
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Grille de passions animée en cascade */}
+        <motion.div 
+          className="grid md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {passions.map((p) => (
-            <div 
+            <motion.div 
               key={p.title} 
+              variants={cardVariants}
               onClick={() => setSelectedPassion(p)}
-              className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 cursor-pointer hover:border-emerald-500 hover:bg-white hover:shadow-xl transition-all"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 cursor-pointer hover:border-emerald-500 hover:bg-white hover:shadow-2xl transition-all duration-300"
             >
-              <span className="text-4xl mb-6 block group-hover:scale-110 transition-transform">{p.emoji}</span>
+              <span className="text-4xl mb-6 block group-hover:rotate-12 transition-transform">{p.emoji}</span>
               <h3 className="text-2xl font-black mb-4 tracking-tight">{p.title}</h3>
               <ul className="mb-6 space-y-2">
                 {p.items.map(item => (
                   <li key={item} className="text-sm font-bold text-slate-400 group-hover:text-slate-600">• {item}</li>
                 ))}
               </ul>
-              <p className="text-slate-400 text-xs font-black uppercase tracking-widest">Cliquez pour explorer →</p>
-            </div>
+              <p className="text-emerald-500 text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                Explorer l'univers →
+              </p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        {selectedPassion && (
-          <div 
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md"
-            onClick={() => setSelectedPassion(null)}
-          >
-            <div 
-              className="bg-white rounded-[3rem] max-w-5xl w-full max-h-[95vh] p-8 md:p-10 relative shadow-2xl animate-in fade-in zoom-in duration-300 flex flex-col"
-              onClick={e => e.stopPropagation()}
+        {/* Modale avec AnimatePresence pour une fermeture fluide */}
+        <AnimatePresence>
+          {selectedPassion && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md"
+              onClick={() => setSelectedPassion(null)}
             >
-              <button 
-                onClick={() => setSelectedPassion(null)}
-                className="absolute top-8 right-8 text-slate-400 hover:text-slate-900 font-bold text-2xl z-30"
-              >✕</button>
+              <motion.div 
+                initial={{ scale: 0.9, y: 20, opacity: 0 }}
+                animate={{ scale: 1, y: 0, opacity: 1 }}
+                exit={{ scale: 0.9, y: 20, opacity: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                className="bg-white rounded-[3rem] max-w-5xl w-full max-h-[90vh] p-8 md:p-10 relative shadow-2xl flex flex-col overflow-y-auto scrollbar-hide"
+                onClick={e => e.stopPropagation()}
+              >
+                <button 
+                  onClick={() => setSelectedPassion(null)}
+                  className="absolute top-8 right-8 text-slate-400 hover:text-slate-900 font-bold text-2xl z-30 transition-colors"
+                >✕</button>
 
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-5xl">{selectedPassion.emoji}</span>
-                <h3 className="text-4xl font-black tracking-tighter italic uppercase">{selectedPassion.title}</h3>
-              </div>
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="text-5xl">{selectedPassion.emoji}</span>
+                  <h3 className="text-4xl font-black tracking-tighter italic uppercase">{selectedPassion.title}</h3>
+                </div>
 
-              {/* Galerie des items - Espacement réduit */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
-                {selectedPassion.details.map((detail) => (
-                  <div key={detail.name} className="space-y-2 text-center">
-                    <div className="relative aspect-3/4 rounded-2xl bg-slate-100 overflow-hidden shadow-md group/img">
-                      <img 
-                        src={detail.image} 
-                        alt={detail.name} 
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
-                      />
-                      {/* Overlay Texte + Bouton au survol */}
-                      <div className="absolute inset-0 bg-slate-900/90 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
-                        <p className="text-[10px] md:text-[11px] text-white leading-relaxed font-medium mb-4">
-                          {detail.summary}
-                        </p>
-                        {detail.link && (
-                          <a 
-                            href={detail.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="px-4 py-2 bg-white text-slate-900 rounded-full text-[10px] font-black uppercase tracking-tighter hover:bg-emerald-500 hover:text-white transition-colors"
-                          >
-                            Écouter 🎧
-                          </a>
-                        )}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                  {selectedPassion.details.map((detail, idx) => (
+                    <motion.div 
+                      key={detail.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 * idx }}
+                      className="space-y-3 text-center"
+                    >
+                      <div className="relative aspect-3/4 rounded-2xl bg-slate-100 overflow-hidden shadow-md group/img">
+                        <img 
+                          src={detail.image} 
+                          alt={detail.name} 
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                        />
+                        <div className="absolute inset-0 bg-slate-900/90 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+                          <p className="text-[11px] text-white leading-relaxed font-medium mb-4">{detail.summary}</p>
+                          {detail.link && (
+                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white text-slate-900 rounded-full text-[10px] font-black uppercase hover:bg-emerald-500 hover:text-white transition-colors">
+                              Écouter 🎧
+                            </a>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    <p className="text-[11px] font-black text-slate-900 leading-tight uppercase tracking-tighter">{detail.name}</p>
-                  </div>
-                ))}
-              </div>
+                      <p className="text-[11px] font-black text-slate-900 uppercase tracking-tighter">{detail.name}</p>
+                    </motion.div>
+                  ))}
+                </div>
 
-              {/* Section Anecdote compacte */}
-              <div className="bg-slate-50 p-6 rounded-4x1 border border-slate-100 mt-auto">
-                <h4 className="text-[9px] font-black uppercase tracking-widest text-emerald-600 mb-2">L'Anecdote</h4>
-                <p className="text-slate-600 text-sm leading-relaxed italic">
-                  "{selectedPassion.anecdote}"
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="bg-slate-50 p-6 rounded-3xl border border-slate-100"
+                >
+                  <h4 className="text-[9px] font-black uppercase tracking-widest text-emerald-600 mb-2">L'Anecdote</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed italic">"{selectedPassion.anecdote}"</p>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
