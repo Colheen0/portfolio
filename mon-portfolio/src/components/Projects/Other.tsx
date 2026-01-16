@@ -45,7 +45,7 @@ export const Other = () => {
   const photoAlbums: PhotoAlbum[] = [
     {
       title: "Potit chat",
-      category: "Photographie",
+      category: "Photographie (Coucou Gaëlle !)",
       cover: "/assets/photos/potit_chat/chat.jpg",
       images: [
         "/assets/photos/potit_chat/chat.jpg",
