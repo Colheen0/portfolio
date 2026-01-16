@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { Variants } from 'framer-motion'; // Import type pour la règle verbatimModuleSyntax
+import type { Variants } from 'framer-motion';
 
 interface InspirationItem {
   name: string;
@@ -103,7 +103,6 @@ export const Passions = () => {
     }
   ];
 
-  // Variantes d'animation
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -125,7 +124,6 @@ export const Passions = () => {
     <section id="passions" className="py-24 px-6 bg-white overflow-hidden">
       <div className="max-w-5xl mx-auto">
         
-        {/* En-tête avec apparition au scroll */}
         <motion.div 
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -148,7 +146,6 @@ export const Passions = () => {
           </p>
         </motion.div>
 
-        {/* Grille de passions animée en cascade */}
         <motion.div 
           className="grid md:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -162,7 +159,7 @@ export const Passions = () => {
               variants={cardVariants}
               onClick={() => setSelectedPassion(p)}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 cursor-pointer hover:border-emerald-500 hover:bg-white hover:shadow-2xl transition-all duration-300"
+              className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 cursor-pointer hover:border-emerald-500 hover:bg-white hover:shadow-xl transition-all duration-300"
             >
               <span className="text-4xl mb-6 block group-hover:rotate-12 transition-transform">{p.emoji}</span>
               <h3 className="text-2xl font-black mb-4 tracking-tight">{p.title}</h3>
@@ -178,7 +175,6 @@ export const Passions = () => {
           ))}
         </motion.div>
 
-        {/* Modale avec AnimatePresence pour une fermeture fluide */}
         <AnimatePresence>
           {selectedPassion && (
             <motion.div 
@@ -193,44 +189,44 @@ export const Passions = () => {
                 animate={{ scale: 1, y: 0, opacity: 1 }}
                 exit={{ scale: 0.9, y: 20, opacity: 0 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="bg-white rounded-[3rem] max-w-5xl w-full max-h-[90vh] p-8 md:p-10 relative shadow-2xl flex flex-col overflow-y-auto scrollbar-hide"
+                className="bg-white rounded-[3rem] max-w-4xl w-full max-h-[90vh] p-6 md:p-8 relative shadow-2xl flex flex-col overflow-y-auto scrollbar-hide"
                 onClick={e => e.stopPropagation()}
               >
                 <button 
                   onClick={() => setSelectedPassion(null)}
-                  className="absolute top-8 right-8 text-slate-400 hover:text-slate-900 font-bold text-2xl z-30 transition-colors"
+                  className="absolute top-6 right-8 text-slate-400 hover:text-slate-900 font-bold text-2xl z-30 transition-colors"
                 >✕</button>
 
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="text-5xl">{selectedPassion.emoji}</span>
-                  <h3 className="text-4xl font-black tracking-tighter italic uppercase">{selectedPassion.title}</h3>
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-4xl">{selectedPassion.emoji}</span>
+                  <h3 className="text-3xl font-black tracking-tighter italic uppercase">{selectedPassion.title}</h3>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                   {selectedPassion.details.map((detail, idx) => (
                     <motion.div 
                       key={detail.name}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 * idx }}
-                      className="space-y-3 text-center"
+                      className="space-y-2 text-center"
                     >
-                      <div className="relative aspect-3/4 rounded-2xl bg-slate-100 overflow-hidden shadow-md group/img">
+                      <div className="relative aspect-4/5 rounded-2xl bg-slate-100 overflow-hidden shadow-md group/img">
                         <img 
                           src={detail.image} 
                           alt={detail.name} 
                           className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
                         />
                         <div className="absolute inset-0 bg-slate-900/90 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
-                          <p className="text-[11px] text-white leading-relaxed font-medium mb-4">{detail.summary}</p>
+                          <p className="text-[10px] text-white leading-relaxed font-medium mb-3">{detail.summary}</p>
                           {detail.link && (
-                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white text-slate-900 rounded-full text-[10px] font-black uppercase hover:bg-emerald-500 hover:text-white transition-colors">
+                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-white text-slate-900 rounded-full text-[9px] font-black uppercase hover:bg-emerald-500 hover:text-white transition-colors">
                               Écouter 🎧
                             </a>
                           )}
                         </div>
                       </div>
-                      <p className="text-[11px] font-black text-slate-900 uppercase tracking-tighter">{detail.name}</p>
+                      <p className="text-[10px] font-black text-slate-900 uppercase tracking-tighter">{detail.name}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -239,10 +235,10 @@ export const Passions = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
-                  className="bg-slate-50 p-6 rounded-3xl border border-slate-100"
+                  className="bg-slate-50 p-5 rounded-3xl border border-slate-100"
                 >
                   <h4 className="text-[9px] font-black uppercase tracking-widest text-emerald-600 mb-2">L'Anecdote</h4>
-                  <p className="text-slate-600 text-sm leading-relaxed italic">"{selectedPassion.anecdote}"</p>
+                  <p className="text-slate-600 text-xs leading-relaxed italic">"{selectedPassion.anecdote}"</p>
                 </motion.div>
               </motion.div>
             </motion.div>
