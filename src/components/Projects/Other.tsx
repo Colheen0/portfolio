@@ -25,20 +25,20 @@ export const Other = () => {
     { 
       title: "Effet de disparition de poussière", 
       category: "After Effects", 
-      videoSrc: "assets/video/departure snap thanos.MP4",
-      poster: "assets/video/poster_thanos.png" 
+      videoSrc: "../assets/video/departure snap thanos.MP4",
+      poster: "../assets/video/poster_thanos.png" 
     },
     { 
       title: "Intro motion Marne et Gondoire", 
       category: "After Effects", 
-      videoSrc: "assets/video/MAG.MP4",
-      poster: "assets/video/poster_mag.png" 
+      videoSrc: "../assets/video/MAG.MP4",
+      poster: "../assets/video/poster_mag.png" 
     },
     { 
       title: "Motion sphère en rotation", 
       category: "After Effects", 
-      videoSrc: "assets/video/rotation.MP4",
-      poster: "/assets/video/poster_rotation.png" 
+      videoSrc: "../assets/video/rotation.MP4",
+      poster: "../assets/video/poster_rotation.png" 
     }
   ];
 
@@ -46,66 +46,66 @@ export const Other = () => {
     {
       title: "Potit chat",
       category: "Photographie (Coucou Gaëlle !)",
-      cover: "/assets/photos/potit_chat/chat.jpg",
+      cover: "../assets/photos/potit_chat/chat.jpg",
       images: [
-        "assets/photos/potit_chat/chat.jpg",
-        "assets/photos/potit_chat/chat2.jpg",
-        "assets/photos/potit_chat/chat3.jpg",
-        "assets/photos/potit_chat/chat4.jpg",
-        "assets/photos/potit_chat/chat5.png",
-        "assets/photos/potit_chat/chat6.jpg",
-        "assets/photos/potit_chat/chat7.png",
-        "assets/photos/potit_chat/chat8.png",
+        "../assets/photos/potit_chat/chat.jpg",
+        "../assets/photos/potit_chat/chat2.jpg",
+        "../assets/photos/potit_chat/chat3.jpg",
+        "../assets/photos/potit_chat/chat4.jpg",
+        "../assets/photos/potit_chat/chat5.png",
+        "../assets/photos/potit_chat/chat6.jpg",
+        "../assets/photos/potit_chat/chat7.png",
+        "../assets/photos/potit_chat/chat8.png",
       ]
     },
     {
       title: "Ciel",
       category: "Photographie",
-      cover: "assets/photos/ciel/avion.jpg",
+      cover: "../assets/photos/ciel/avion.jpg",
       images: [
-        "assets/photos/ciel/jour.jpg",
-        "assets/photos/ciel/jour1.jpg",
-        "assets/photos/ciel/jour2.jpg",
-        "assets/photos/ciel/jour3.jpg",
-        "assets/photos/ciel/jour5.jpg",
-        "assets/photos/ciel/avion.jpg",
+        "../assets/photos/ciel/jour.jpg",
+        "../assets/photos/ciel/jour1.jpg",
+        "../assets/photos/ciel/jour2.jpg",
+        "../assets/photos/ciel/jour3.jpg",
+        "../assets/photos/ciel/jour5.jpg",
+        "../assets/photos/ciel/avion.jpg",
       ]
     },
     {
       title: "Asie 2024",
       category: "Photographie",
-      cover: "assets/photos/asie_2024/asie10.jpg",
+      cover: "../assets/photos/asie_2024/asie10.jpg",
       images: [
-        "assets/photos/asie_2024/asie.jpg",
-        "assets/photos/asie_2024/asie1.jpg",
-        "assets/photos/asie_2024/asie2.jpg",
-        "assets/photos/asie_2024/asie3.jpg",
-        "assets/photos/asie_2024/asie4.jpg",
-        "assets/photos/asie_2024/asie5.jpg",
-        "assets/photos/asie_2024/asie6.jpg",
-        "assets/photos/asie_2024/asie7.jpg",
-        "assets/photos/asie_2024/asie8.jpg",
-        "assets/photos/asie_2024/asie9.jpg",
-        "assets/photos/asie_2024/asie10.jpg",
+        "../assets/photos/asie_2024/asie.jpg",
+        "../assets/photos/asie_2024/asie1.jpg",
+        "../assets/photos/asie_2024/asie2.jpg",
+        "../assets/photos/asie_2024/asie3.jpg",
+        "../assets/photos/asie_2024/asie4.jpg",
+        "../assets/photos/asie_2024/asie5.jpg",
+        "../assets/photos/asie_2024/asie6.jpg",
+        "../assets/photos/asie_2024/asie7.jpg",
+        "../assets/photos/asie_2024/asie8.jpg",
+        "../assets/photos/asie_2024/asie9.jpg",
+        "../assets/photos/asie_2024/asie10.jpg",
       ]
     },
     {
       title: "Paris 2025",
       category: "Photographie",
-      cover: "assets/photos/paris_2025/paris10.png",
+      cover: "../assets/photos/paris_2025/paris10.png",
       images: [
-        "assets/photos/paris_2025/paris.png",
-        "assets/photos/paris_2025/paris1.png",
-        "assets/photos/paris_2025/paris2.png",
-        "assets/photos/paris_2025/paris3.png",
-        "assets/photos/paris_2025/paris4.png",
-        "assets/photos/paris_2025/paris5.png",
-        "assets/photos/paris_2025/paris6.png",
-        "assets/photos/paris_2025/paris7.png",
-        "assets/photos/paris_2025/paris8.png",
-        "assets/photos/paris_2025/paris9.png",
-        "assets/photos/paris_2025/paris10.png",
-        "assets/photos/paris_2025/paris11.png",
+        "../assets/photos/paris_2025/paris.png",
+        "../assets/photos/paris_2025/paris1.png",
+        "../assets/photos/paris_2025/paris2.png",
+        "../assets/photos/paris_2025/paris3.png",
+        "../assets/photos/paris_2025/paris4.png",
+        "../assets/photos/paris_2025/paris5.png",
+        "../assets/photos/paris_2025/paris6.png",
+        "../assets/photos/paris_2025/paris7.png",
+        "../assets/photos/paris_2025/paris8.png",
+        "../assets/photos/paris_2025/paris9.png",
+        "../assets/photos/paris_2025/paris10.png",
+        "../assets/photos/paris_2025/paris11.png",
       ]
     }
   ];
