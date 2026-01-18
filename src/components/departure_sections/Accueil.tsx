@@ -1,6 +1,6 @@
 import { ScrollReveal } from '../utils/ScrollReveal';
 
-export const PageDeparture = () => {
+export const Accueil = () => {
   const personnages = [
     {
       nom: "Nom du Héros",

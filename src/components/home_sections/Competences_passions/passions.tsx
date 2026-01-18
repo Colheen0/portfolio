@@ -85,7 +85,7 @@ export const Passions = () => {
         { 
           name: "Hook", 
           image: "./assets/passions/hook.webp",
-          summary: "C'est un film TYPIQUE de mon enfance, à l'époque où tout était simple et beau je me rappelle de la musique et des visuels qui sont juste époustouflants, je l'ai regardé il n'y a pas très longtemps par nostalgie et quelle claque ! Il y à une scène qui m'a rappeler mon enfance c'est le moment où Peter retourne au pays imaginaire et la c'était comme une explosion dans ma tête mon imagination qui bouillionais comme avant ça m'a fait chaud au coeur." 
+          summary: "C'est un film TYPIQUE de mon enfance, à l'époque où tout était simple et beau je me rappelle de la musique et des visuels qui sont juste époustouflants. je l'ai regardé il n'y a pas très longtemps par nostalgie et quelle claque ! Il y a une scène qui m'a rappeler mon enfance c'est le moment où Peter retourne au pays imaginaire et là c'était comme une explosion dans ma tête, mon imagination qui bouillionais comme avant, ça m'a fait chaud au coeur." 
         },
         { 
           name: "New Girl", 

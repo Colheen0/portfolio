@@ -2,8 +2,8 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import { useEffect } from 'react';
 import { Navbar } from './components/home_sections/Navbar';
 import { Footer } from './components/home_sections/footer';
-import { Home } from './components/pages/home';
-import { PageDeparture } from './components/pages/pageDeparture';
+import { Portfolio } from './components/pages/Portfolio';
+import { Departure } from './components/pages/Departure';
 
 // Composant pour forcer le retour en haut de page lors d'un changement de route
 function ScrollToTop() {
@@ -25,8 +25,8 @@ function App() {
         <main>
           <Routes>
             {/* Avec HashRouter, tes URLs ressembleront à : ton-site/#/ et ton-site/#/departure */}
-            <Route path="/" element={<Home />} />
-            <Route path="/departure" element={<PageDeparture />} />
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/departure" element={<Departure />} />
           </Routes>
         </main>
         <Footer />

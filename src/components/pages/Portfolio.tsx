@@ -9,7 +9,7 @@ import { CMJ } from '../home_sections/Experiences/CMJ';
 import { Scholar } from '../home_sections/Projects/Scholar';
 import { Other } from '../home_sections/Projects/Other';
 
-export const Home = () => {
+export const Portfolio = () => {
   return (
     <>
       <Accueil />
