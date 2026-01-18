@@ -1,4 +1,5 @@
 // src/pages/Home.tsx
+import { Navbar } from '../home_sections/Navbar';
 import { Accueil } from '../home_sections/Accueil';
 import { Moi } from '../home_sections/Moi';
 import { Competences } from '../home_sections/Competences_passions/competences';
@@ -12,6 +13,7 @@ import { Other } from '../home_sections/Projects/Other';
 export const Portfolio = () => {
   return (
     <>
+      <Navbar />
       <Accueil />
       <Moi />
       <Competences />

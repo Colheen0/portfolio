@@ -1,6 +1,5 @@
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Changement vers HashRouter
 import { useEffect } from 'react';
-import { Navbar } from './components/home_sections/Navbar';
 import { Footer } from './components/home_sections/footer';
 import { Portfolio } from './components/pages/Portfolio';
 import { Departure } from './components/pages/Departure';
@@ -21,7 +20,6 @@ function App() {
       <ScrollToTop /> 
       
       <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-indigo-100">
-        <Navbar />
         <main>
           <Routes>
             {/* Avec HashRouter, tes URLs ressembleront à : ton-site/#/ et ton-site/#/departure */}

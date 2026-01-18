@@ -1,76 +1,68 @@
-import { ScrollReveal } from '../utils/ScrollReveal';
+import { ScrollReveal } from '../utils/ScrollReveal'; // Chemin mis à jour selon ton archi
+import { motion } from 'framer-motion';
 
 export const Accueil = () => {
-  const personnages = [
-    {
-      nom: "Nom du Héros",
-      role: "Protagoniste",
-      description: "Une brève description de son caractère et de son importance dans l'histoire.",
-      image: "/assets/img/characters/hero.jpg"
-    },
-    {
-      nom: "Nom du Rival",
-      role: "Antagoniste",
-      description: "Ce qui le pousse à s'opposer au héros dans cet univers.",
-      image: "/assets/img/characters/rival.jpg"
-    }
-  ];
-
   return (
-    <main id='home' className="pt-32 pb-24 bg-slate-900 text-white min-h-screen">
-      <div className="max-w-5xl mx-auto px-6">
-        
-        {/* Section Titre & Synopsis */}
+    <section id='home' className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+      
+      {/* 1. L'IMAGE DE FOND ET OVERLAY CORRIGÉS */}
+      <div className="absolute inset-0 z-0">
+        <img 
+        src="assets/departure_img/departure_bg.jpg" 
+        alt="Ambiance Departure" 
+        className="w-full h-full object-cover object-[center_23%] opacity-50" 
+        />
+        {/* Overlay ajusté pour plus de clarté en haut */}
+        <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/60 to-transparent" />
+      </div>
+
+      {/* 2. CONTENU TEXTUEL CENTRAL */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <ScrollReveal>
-          <div className="mb-24">
-            <span className="text-indigo-400 font-black uppercase tracking-[0.3em] text-xs">L'Univers</span>
-            <h1 className="text-6xl md:text-8xl font-black mb-12 tracking-tighter italic uppercase">
+          <div className="flex flex-col items-center">
+            {/* Badge supérieur */}
+            <span className="px-4 py-1.5 bg-indigo-500/20 backdrop-blur-md border border-white/10 text-indigo-300 font-black uppercase tracking-[0.4em] text-[10px] rounded-full mb-8">
+              L'Univers Original
+            </span>
+
+            {/* Titre Giga */}
+            <h1 className="text-7xl md:text-[10rem] font-black text-white mb-8 tracking-tighter italic uppercase leading-none drop-shadow-2xl">
               Departure
             </h1>
             
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <p className="text-2xl text-slate-300 leading-relaxed font-light italic border-l-4 border-indigo-500 pl-8">
+            {/* Phrase d'accroche */}
+            <div className="max-w-2xl">
+              <p className="text-xl md:text-3xl text-slate-200 leading-relaxed font-light italic border-x-2 border-indigo-500/50 px-12">
                 "Ici, tu mets une phrase d'accroche forte qui définit l'ambiance de Departure."
               </p>
-              <div className="space-y-6 text-slate-400 leading-relaxed">
-                <p>
-                  **Synopsis :** C'est ici que tu racontes l'histoire globale. Explique les enjeux, le monde, et pourquoi ce projet te tient à cœur. 
-                </p>
-                <p>
-                  Décris les thèmes principaux (voyage, technologie, mystère...) pour que le lecteur plonge immédiatement dans ton imagination.
-                </p>
-              </div>
             </div>
           </div>
         </ScrollReveal>
-
-        {/* Section Personnages */}
-        <section>
-          <h2 className="text-3xl font-black mb-12 uppercase tracking-tighter border-b border-white/10 pb-4">
-            Personnages <span className="text-indigo-500">clés</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {personnages.map((perso, index) => (
-              <ScrollReveal key={perso.nom} delay={index * 0.2}>
-                <div className="group bg-white/5 border border-white/10 rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center p-4 gap-8 hover:bg-white/10 transition-all">
-                  <div className="w-48 h-48 shrink-0 rounded-4x1 overflow-hidden border-2 border-white/10">
-                    <img src={perso.image} alt={perso.nom} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </div>
-                  <div className="py-4">
-                    <h3 className="text-2xl font-black tracking-tight mb-1">{perso.nom}</h3>
-                    <p className="text-indigo-400 text-xs font-black uppercase tracking-widest mb-4">{perso.role}</p>
-                    <p className="text-slate-400 text-sm leading-relaxed">
-                      {perso.description}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
-
       </div>
-    </main>
+
+      {/* 3. APPEL AU SCROLL CLIQUABLE */}
+      <motion.a 
+        href="/portfolio/#/departure#synopsis" 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        whileHover={{ scale: 1.1 }} 
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 cursor-pointer group"
+      >
+        <div className="flex flex-col items-center gap-4">
+          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-slate-400 group-hover:text-indigo-400 transition-colors opacity-60 group-hover:opacity-100">
+            Explorer le projet
+          </span>
+          
+          {/* Ligne animée (Rebond) */}
+          <motion.div 
+            animate={{ y: [0, 12, 0] }} 
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="w-px h-16 bg-linear-to-b from-indigo-500 via-indigo-500/50 to-transparent" 
+          />
+        </div>
+      </motion.a>
+
+    </section>
   );
 };
