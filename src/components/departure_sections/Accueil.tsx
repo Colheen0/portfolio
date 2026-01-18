@@ -1,4 +1,4 @@
-import { ScrollReveal } from '../utils/ScrollReveal'; // Chemin mis à jour selon ton archi
+import { ScrollReveal } from '../utils/ScrollReveal'; 
 import { motion } from 'framer-motion';
 
 export const Accueil = () => {
