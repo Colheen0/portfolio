@@ -88,7 +88,7 @@ export const Moi = () => {
               {/* Élément de parcours 1 */}
               <div className="relative group">
                 <div className="absolute -left-9.25 top-1 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white shadow-sm group-hover:scale-125 transition-transform"></div>
-                <span className="text-xs font-bold text-indigo-600">2024 - Présent</span>
+                <span className="text-xs font-bold text-indigo-600">2023 - Présent</span>
                 <h4 className="text-lg font-bold text-slate-900">BUT MMI</h4>
                 <p className="text-sm text-slate-500 mt-1 italic">Métiers du Multimédia et de l'Internet.</p>
               </div>

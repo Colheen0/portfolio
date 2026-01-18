@@ -129,9 +129,9 @@ export const Other = () => {
     imageSrc: "assets/dessins/dessin1.jpeg"
   },
   {
-    title: "Représentation du voyage",
-    category: "illustration imaginative",
-    imageSrc: "assets/dessins/dessin2.jpeg"
+    title: "Pose 3",
+    category: "dessin d'anatomie",
+    imageSrc: "assets/dessins/dessin5.jpeg"
   },
   {
     title: "Bras 1",
@@ -139,9 +139,9 @@ export const Other = () => {
     imageSrc: "assets/dessins/dessin3.jpeg"
   },
   {
-    title: "Pose 3",
-    category: "dessin d'anatomie",
-    imageSrc: "assets/dessins/dessin5.jpeg"
+    title: "Représentation du voyage",
+    category: "illustration imaginative",
+    imageSrc: "assets/dessins/dessin2.jpeg"
   },
   {
     title: "Représentation de l'insomnie",
