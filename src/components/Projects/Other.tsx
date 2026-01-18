@@ -16,10 +16,17 @@ interface PhotoAlbum {
   images: string[];
 }
 
+interface Drawing {
+  title: string;
+  category: string;
+  imageSrc: string;
+}
+
 export const Other = () => {
   const [activeVideo, setActiveVideo] = useState<PersonalProject | null>(null);
   const [activeAlbum, setActiveAlbum] = useState<PhotoAlbum | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [activeDrawing, setActiveDrawing] = useState<Drawing | null>(null);
 
   const aeProjects: PersonalProject[] = [
     { 
@@ -109,6 +116,39 @@ export const Other = () => {
       ]
     }
   ];
+
+  const drawings: Drawing[] = [
+  {
+    title: "Pose 1",
+    category: "dessin d'anatomie",
+    imageSrc: "assets/dessins/dessin.jpeg"
+  },
+  {
+    title: "Pose 2",
+    category: "dessin d'anatomie",
+    imageSrc: "assets/dessins/dessin1.jpeg"
+  },
+  {
+    title: "Représentation du voyage",
+    category: "illustration imaginative",
+    imageSrc: "assets/dessins/dessin2.jpeg"
+  },
+  {
+    title: "Bras 1",
+    category: "dessin d'anatomie",
+    imageSrc: "assets/dessins/dessin3.jpeg"
+  },
+  {
+    title: "Pose 3",
+    category: "dessin d'anatomie",
+    imageSrc: "assets/dessins/dessin5.jpeg"
+  },
+  {
+    title: "Représentation de l'insomnie",
+    category: "illustration imaginative",
+    imageSrc: "assets/dessins/dessin4.jpeg"
+  }
+];
 
   const nextImage = () => {
     if (activeAlbum) setCurrentImageIndex((prev) => (prev + 1) % activeAlbum.images.length);
@@ -243,6 +283,48 @@ export const Other = () => {
           </motion.div>
         </div>
 
+        {/* Section Dessins */}
+        <div className="mb-20">
+          <motion.h3 
+            className="text-sm font-black text-rose-500 uppercase tracking-[0.2em] mb-8 border-l-4 border-rose-500 pl-4"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            Dessins & Illustrations
+          </motion.h3>
+          <motion.div 
+            className="flex overflow-x-auto gap-6 pb-8 snap-x scrollbar-hide"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {drawings.map(draw => (
+              <motion.div 
+                key={draw.title} 
+                variants={itemVariants}
+                whileHover={{ y: -8, scale: 1.02 }}
+                onClick={() => setActiveDrawing(draw)} 
+                className="min-w-70 bg-slate-50 border border-slate-200 rounded-4xl overflow-hidden snap-center group cursor-pointer hover:border-rose-500 hover:shadow-lg transition-all"
+              >
+                <div className="relative aspect-square bg-slate-200 overflow-hidden">
+                  <img src={draw.imageSrc} alt={draw.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-rose-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 text-white">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg tracking-tight group-hover:text-rose-600 transition-colors">{draw.title}</h4>
+                  <p className="text-[10px] font-black uppercase text-slate-400 mt-2 tracking-widest">{draw.category}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
         {/* Modales avec AnimatePresence */}
         <AnimatePresence>
           {/* Modale Vidéo */}
@@ -314,6 +396,28 @@ export const Other = () => {
                 </div>
               </motion.div>
             </motion.div>
+          )}
+          {/* Modale Dessin */}
+                    {activeDrawing && (
+                      <motion.div 
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/95 backdrop-blur-md" 
+                        onClick={() => setActiveDrawing(null)}
+                      >
+                        <motion.div 
+                          initial={{ scale: 0.9, y: 20 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.9, y: 20 }}
+                          className="max-w-4xl w-full flex flex-col relative" onClick={e => e.stopPropagation()}
+                        >
+                          <button onClick={() => setActiveDrawing(null)} className="absolute -top-12 right-0 text-white font-bold text-xl hover:text-rose-400 transition-colors">Fermer ✕</button>
+                          <div className="bg-black/20 rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-square md:aspect-auto md:h-[80vh]">
+                            <img src={activeDrawing.imageSrc} alt={activeDrawing.title} className="w-full h-full object-contain" />
+                          </div>
+                          <div className="mt-6 text-white text-center">
+                            <h3 className="text-2xl font-black tracking-tight">{activeDrawing.title}</h3>
+                            <p className="text-slate-400 text-sm uppercase font-bold mt-1 tracking-widest">{activeDrawing.category}</p>
+                          </div>
+                        </motion.div>
+                      </motion.div>
           )}
         </AnimatePresence>
       </div>
