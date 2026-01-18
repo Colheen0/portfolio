@@ -1,7 +1,7 @@
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Changement vers HashRouter
 import { useEffect } from 'react';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/footer';
+import { Navbar } from './components/home_sections/Navbar';
+import { Footer } from './components/home_sections/footer';
 import { Home } from './components/pages/home';
 import { PageDeparture } from './components/pages/pageDeparture';
 
