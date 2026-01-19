@@ -2,6 +2,7 @@ import { Navbar } from "../departure_sections/Navbar";
 import { Accueil } from "../departure_sections/Accueil";
 import { Synopsis } from "../departure_sections/Synopsis";
 import { Personnages } from "../departure_sections/personnages";
+import { Footer } from "../departure_sections/footer";
 
 export const Departure = () => {
   return (
@@ -10,6 +11,7 @@ export const Departure = () => {
       <Accueil />
       <Synopsis />
       <Personnages />
+      <Footer />
     </>
   );
 };

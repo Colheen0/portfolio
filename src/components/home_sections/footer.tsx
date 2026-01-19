@@ -1,3 +1,5 @@
+import { NavHashLink } from "react-router-hash-link";
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -31,6 +33,7 @@ export const Footer = () => {
             <a href="#" className="text-sm font-medium hover:text-indigo-600 transition-colors">Accueil</a>
             <a href="#departure" className="text-sm font-medium hover:text-indigo-600 transition-colors">Departure</a>
             <a href="#projets" className="text-sm font-medium hover:text-indigo-600 transition-colors">Projets</a>
+            <NavHashLink smooth to="/departure#home" className="text-sm font-bold text-indigo-400 hover:text-indigo-300 transition-colors"> Departure → </NavHashLink>
           </div>
 
           <div className="flex flex-col gap-4">

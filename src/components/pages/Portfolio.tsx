@@ -9,6 +9,7 @@ import { MarneEtGondoire } from '../home_sections/Experiences/MarneEtGondoire';
 import { CMJ } from '../home_sections/Experiences/CMJ';
 import { Scholar } from '../home_sections/Projects/Scholar';
 import { Other } from '../home_sections/Projects/Other';
+import { Footer } from '../home_sections/footer';
 
 export const Portfolio = () => {
   return (
@@ -23,6 +24,7 @@ export const Portfolio = () => {
       <CMJ />
       <Scholar />
       <Other />
+      <Footer />
     </>
   );
 };

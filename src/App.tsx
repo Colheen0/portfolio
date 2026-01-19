@@ -1,6 +1,5 @@
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Changement vers HashRouter
 import { useEffect } from 'react';
-import { Footer } from './components/home_sections/footer';
 import { Portfolio } from './components/pages/Portfolio';
 import { Departure } from './components/pages/Departure';
 
@@ -27,7 +26,6 @@ function App() {
             <Route path="/departure" element={<Departure />} />
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   );
