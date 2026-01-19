@@ -55,7 +55,7 @@ export const Personnages = () => {
     {
       prenom: "Grace",
       nom: "SORA",
-      role: "La Garde",
+      role: "La magicienne",
       description: "La spécialiste en Tamlin et Grande Prêtresse d'Oorasora. Elle dispose d'une maîtrise des magies élémentaires capable de renverser le cours d'un affrontement, faisant d'elle un atout majeur de l'expédition. On ne sait que peu de choses sur ses aspirations personnelles tant elle est dévouée à son devoir.",
       image: "assets/departure_img/grace_cbt.png",
       color: "bg-red-500",
