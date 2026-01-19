@@ -19,26 +19,18 @@ export const Synopsis = () => {
         </ScrollReveal>
 
         <div className="grid gap-16">
-          {/* La grande phrase d'accroche */}
-          <ScrollReveal delay={0.2}>
-            <p className="text-2xl md:text-4xl font-light italic text-slate-200 leading-tight text-center px-4">
-              "Dans un monde où les départs ne sont jamais des adieux, mais des commencements brutaux..."
-            </p>
-          </ScrollReveal>
-
           {/* Le corps du texte */}
           <ScrollReveal delay={0.4}>
             <div className="columns-1 md:columns-2 gap-12 space-y-8 text-slate-400 leading-relaxed text-lg font-light">
               <p>
-                <strong className="text-white font-bold italic">Departure</strong> n'est pas seulement un voyage à travers l'espace, c'est une odyssée vers l'inconnu. L'histoire suit les traces de survivants qui doivent réapprendre à vivre alors que tout ce qu'ils connaissaient a disparu en un instant.
+                <strong className="text-white font-bold italic">Departure</strong> n'est pas seulement un voyage à travers l'espace, c'est une odyssée vers l'inconnu. L'histoire suit un groupe d'exploration qui part découvrir un ancien monde, afin de découvrir de vieux mystères.
               </p>
-              
+            
               <p>
-                Au cœur de cet univers, la technologie et le mystère s'entremêlent. Les enjeux ne sont plus seulement individuels, ils deviennent universels. Comment rester humain quand les lois de la physique elles-mêmes semblent s'effondrer ?
+               Là où les cultures s’opposent et où les rêves des nations s’entrechoquent, une force se cache dans les interstices. Ce qui n’était qu'une expédition pourrait cacher quelque chose de plus sombre. Comment trouver le courage de faire un pas de plus, quand on découvre que les fondations de notre vie ne sont que les débris du rêve d'un autre ?              
               </p>
-
               <p>
-                Ce projet est né d'une volonté d'explorer les thèmes du deuil, de la résilience et de la découverte. Chaque personnage porte en lui une part de cette ombre, cherchant une lumière qui semble s'éloigner à chaque pas.
+                Ce projet c'est mon projet de coeur, j'y ai mis tout ce que j'ai : mon imagination, ma passion, mon espoir, tout. C'est une histoire que j'ai écrite d'abord pour moi en y mettant tout ce que j'aime dans la fiction, mais c'est aussi une histoire que j'ai envie de partager avec le plus grand nombre pour faire réfléchire les gens, les faire rêver revenir à des choses simples.
               </p>
 
               <div className="p-6 bg-white/5 border border-white/10 rounded-3xl italic text-sm text-indigo-300">

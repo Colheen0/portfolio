@@ -16,8 +16,8 @@ export const Personnages = () => {
     {
       prenom: "Reïs",
       nom: "MATABI",
-      role: "Le Protagoniste",
-      description: "Porteur d'un héritage dont il ignore encore la portée, Reïs est le pilier de cette expédition.",
+      role: "Le Capitaine",
+      description: "Le capitaine de l'expedition, il vient d'un continent inconnu mais il connais toutes les langues de l'alliance presque parfaitement, on ne sais pas grand chose de lui mais il possède des capacités indéniables bien qu'il soit de nature timide et réservé.",
       image: "assets/departure_img/reis_cbt.png",
       color: "bg-blue-500",
       rgb: "59, 130, 246"
@@ -26,7 +26,8 @@ export const Personnages = () => {
       prenom: "Élizabeth",
       nom: "TÉBA",
       surnom: "(Lily)",
-      description: "Esprit brillant et analyste de terrain, Lily apporte la logique nécessaire aux situations désespérées.",
+      role: "L'Analyste",
+      description: "La responsable logistique de l'escouade. Elle semble porter le poids du monde sur ses épaules, mais elle accueille chaque membre avec une chaleur désarmante qu'elle tient de son enfance à Nueva Memoria. Elle possède une capacité d'organisation et une gestion des flux de données qui frôlent la perfection.",
       image: "assets/departure_img/lily_cbt.png",
       color: "bg-orange-500",
       rgb: "249, 115, 22"
@@ -35,7 +36,8 @@ export const Personnages = () => {
       prenom: "Léonard",
       nom: "PENDRALAYON",
       surnom: "(Léo)",
-      description: "Force tranquille de l'équipe, Léo est celui sur qui tout le monde peut compter.",
+      role: "Le cuisinier",
+      description: "Le cuisinier et soutien tactique de l'expédition. Issu d'une des lignée royal de Besmithian, il représente son pays en se consacrant au bien-être de ses camarades à travers l'art culinaire et la gestion des ressources. Il est l'âme légère du groupe, toujours prêt à détendre l'atmosphère.",
       image: "assets/departure_img/leo_cbt.png",
       color: "bg-pink-500",
       rgb: "236, 72, 153"
@@ -44,7 +46,8 @@ export const Personnages = () => {
       prenom: "Vicaramecia",
       nom: "DRAUPNIR",
       surnom: "(Higgs)",
-      description: "Expert en technologies oubliées, Higgs possède une vision du monde qui dépasse l'entendement.",
+      role: "L'armurier",
+      description: "Le maître-forgeron et pilier technique de l'expédition. C'est un homme de peu de mots qui vient des cercles inferieurs d'Asmithoed, dont la présence impose le respect par sa stature et sa prothèse mécanique impressionnante. Ses compétences en ingénierie et en manipulation de la matière sont sans égales.",
       image: "assets/departure_img/vica_cbt.png",
       color: "bg-purple-500",
       rgb: "168, 85, 247"
@@ -52,7 +55,8 @@ export const Personnages = () => {
     {
       prenom: "Grace",
       nom: "SORA",
-      description: "Sa maîtrise de la navigation et son instinct de survie ont sauvé l'équipe plus d'une fois.",
+      role: "La Garde",
+      description: "La spécialiste en Tamlin et Grande Prêtresse d'Oorasora. Elle dispose d'une maîtrise des magies élémentaires capable de renverser le cours d'un affrontement, faisant d'elle un atout majeur de l'expédition. On ne sait que peu de choses sur ses aspirations personnelles tant elle est dévouée à son devoir.",
       image: "assets/departure_img/grace.jpg",
       color: "bg-red-500",
       rgb: "239, 68, 68"
@@ -60,7 +64,8 @@ export const Personnages = () => {
     {
       prenom: "Silver",
       nom: "FURNACE",
-      description: "Silencieux et observateur, Silver est le garant de la sécurité du groupe.",
+      role: "Le Garde",
+      description: "Le fer de lance de l'expédition. Originaire des profondeurs de la Fosse, il manie le Tamlin avec une agressivité et une précision dévastatrices qui ne laissent aucune place à l'erreur. Son charisme et son assurance sur le terrain sont indéniables.",
       image: "assets/departure_img/silver.jpg",
       color: "bg-amber-400",
       rgb: "251, 191, 36"
@@ -71,7 +76,7 @@ export const Personnages = () => {
     <section id="characters" className="relative py-32 bg-slate-900 text-white z-10 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
 
-        {/* 1. PRÉSENTATION DE L'ÉQUIPE (Image de base) */}
+        {/* 1. PRÉSENTATION DE L'ÉQUIPE */}
 
         <ScrollReveal>
 
@@ -90,11 +95,11 @@ export const Personnages = () => {
 
             <div className="mt-8 space-y-4">
               <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed italic">
-                "Unis par une mission commune, ils sont le dernier espoir d'une humanité en quête de réponses."
+                L'équipe d'exploration de l'Alliance, formée par des représentants des cinq continents. Elle a été constituée pour explorer et cartographier les terres de Quadrivium, préparer le terrain pour la colonisation, et établir les bases d'une nouvelle nation.
               </p>
 
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
-                Illustration par l'excellent <a href="https://www.tiktok.com/@mastachef.07?_r=1&_t=ZS-935dGEPpmIz%0A" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-bold underline underline-offset-4 decoration-indigo-500/30">@MastaChef</a>
+                Les illustrations sont faites par mon ami l'excellent <a href="https://www.tiktok.com/@mastachef.07?_r=1&_t=ZS-935dGEPpmIz%0A" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-bold underline underline-offset-4 decoration-indigo-500/30">@MastaChef</a>
               </p>
             </div>
           </div>
