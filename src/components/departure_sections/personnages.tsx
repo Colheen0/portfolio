@@ -57,7 +57,7 @@ export const Personnages = () => {
       nom: "SORA",
       role: "La Garde",
       description: "La spécialiste en Tamlin et Grande Prêtresse d'Oorasora. Elle dispose d'une maîtrise des magies élémentaires capable de renverser le cours d'un affrontement, faisant d'elle un atout majeur de l'expédition. On ne sait que peu de choses sur ses aspirations personnelles tant elle est dévouée à son devoir.",
-      image: "assets/departure_img/grace.jpg",
+      image: "assets/departure_img/grace_cbt.png",
       color: "bg-red-500",
       rgb: "239, 68, 68"
     },
@@ -66,7 +66,7 @@ export const Personnages = () => {
       nom: "FURNACE",
       role: "Le Garde",
       description: "Le fer de lance de l'expédition. Originaire des profondeurs de la Fosse, il manie le Tamlin avec une agressivité et une précision dévastatrices qui ne laissent aucune place à l'erreur. Son charisme et son assurance sur le terrain sont indéniables.",
-      image: "assets/departure_img/silver.jpg",
+      image: "assets/departure_img/silver_cbt.png",
       color: "bg-amber-400",
       rgb: "251, 191, 36"
     }
