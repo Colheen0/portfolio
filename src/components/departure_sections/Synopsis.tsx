@@ -30,7 +30,7 @@ export const Synopsis = () => {
                Là où les cultures s’opposent et où les rêves des nations s’entrechoquent, une force se cache dans les interstices. Ce qui n’était qu'une expédition pourrait cacher quelque chose de plus sombre. Comment trouver le courage de faire un pas de plus, quand on découvre que les fondations de notre vie ne sont que les débris du rêve d'un autre ?              
               </p>
               <p>
-                Ce projet c'est mon projet de coeur, j'y ai mis tout ce que j'ai : mon imagination, ma passion, mon espoir, tout. C'est une histoire que j'ai écrite d'abord pour moi en y mettant tout ce que j'aime dans la fiction, mais c'est aussi une histoire que j'ai envie de partager avec le plus grand nombre pour faire réfléchire les gens, les faire rêver revenir à des choses simples.
+                Ce projet c'est mon projet de coeur, j'y ai mis tout ce que j'ai : mon imagination, ma passion, mon espoir, tout. C'est une histoire que j'ai écrite d'abord pour moi en y mettant tout ce que j'aime dans la fiction, mais c'est aussi une histoire que j'ai envie de partager avec le plus grand nombre pour faire réfléchire les gens, les faire rêver et revenir à des choses simples.
               </p>
 
               <div className="p-6 bg-white/5 border border-white/10 rounded-3xl italic text-sm text-indigo-300">

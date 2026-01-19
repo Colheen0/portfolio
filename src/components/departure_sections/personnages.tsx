@@ -27,7 +27,7 @@ export const Personnages = () => {
       nom: "TÉBA",
       surnom: "(Lily)",
       role: "L'Analyste",
-      description: "La responsable logistique de l'escouade. Elle semble porter le poids du monde sur ses épaules, mais elle accueille chaque membre avec une chaleur désarmante qu'elle tient de son enfance à Nueva Memoria. Elle possède une capacité d'organisation et une gestion des flux de données qui frôlent la perfection.",
+      description: "La responsable logistique de l'expédition. Elle semble porter le poids du monde sur ses épaules, mais elle accueille chaque membre avec une chaleur désarmante qu'elle tient de son enfance à Nueva Memoria. Elle possède une capacité d'organisation et une gestion des flux de données qui frôlent la perfection.",
       image: "assets/departure_img/lily_cbt.png",
       color: "bg-orange-500",
       rgb: "249, 115, 22"
