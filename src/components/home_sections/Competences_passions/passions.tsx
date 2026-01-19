@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react'; // Ajout de useRef et useEffect
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 
@@ -21,6 +21,49 @@ interface Passion {
 
 export const Passions = () => {
   const [selectedPassion, setSelectedPassion] = useState<Passion | null>(null);
+  const modalRef = useRef<HTMLDivElement>(null); // Ref pour le Focus Trap
+
+  // 1. Bloquer le scroll en arrière-plan
+  useEffect(() => {
+    if (selectedPassion) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selectedPassion]);
+
+  // 2. Gestion du Focus Trap (Navigation Tab enfermée)
+  useEffect(() => {
+    if (!selectedPassion) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      if (!modalRef.current) return;
+
+      const focusableElements = modalRef.current.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+      if (e.shiftKey) { // Shift + Tab
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault();
+        }
+      } else { // Tab
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedPassion]);
 
   const passions: Passion[] = [
     {
@@ -154,12 +197,12 @@ export const Passions = () => {
           viewport={{ once: true, margin: "-50px" }}
         >
           {passions.map((p) => (
-            <motion.div 
+            <motion.button // Changé en button pour le focus
               key={p.title} 
               variants={cardVariants}
               onClick={() => setSelectedPassion(p)}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 cursor-pointer hover:border-emerald-500 hover:bg-white hover:shadow-xl transition-all duration-300"
+              className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 cursor-pointer hover:border-emerald-500 hover:bg-white hover:shadow-xl transition-all duration-300 text-left outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
             >
               <span className="text-4xl mb-6 block group-hover:rotate-12 transition-transform">{p.emoji}</span>
               <h3 className="text-2xl font-black mb-4 tracking-tight">{p.title}</h3>
@@ -171,7 +214,7 @@ export const Passions = () => {
               <p className="text-emerald-500 text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                 Explorer l'univers →
               </p>
-            </motion.div>
+            </motion.button>
           ))}
         </motion.div>
 
@@ -183,8 +226,11 @@ export const Passions = () => {
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md"
               onClick={() => setSelectedPassion(null)}
+              role="dialog"
+              aria-modal="true"
             >
               <motion.div 
+                ref={modalRef} // Ajout de la ref
                 initial={{ scale: 0.9, y: 20, opacity: 0 }}
                 animate={{ scale: 1, y: 0, opacity: 1 }}
                 exit={{ scale: 0.9, y: 20, opacity: 0 }}
@@ -193,8 +239,10 @@ export const Passions = () => {
                 onClick={e => e.stopPropagation()}
               >
                 <button 
+                  autoFocus // Ajout de l'autofocus
                   onClick={() => setSelectedPassion(null)}
-                  className="absolute top-6 right-8 text-slate-400 hover:text-slate-900 font-bold text-2xl z-30 transition-colors"
+                  className="absolute top-6 right-8 text-slate-400 hover:text-slate-900 font-bold text-2xl z-30 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-lg p-1"
+                  aria-label="Fermer la fenêtre"
                 >✕</button>
 
                 <div className="flex items-center gap-4 mb-6">
@@ -220,7 +268,7 @@ export const Passions = () => {
                         <div className="absolute inset-0 bg-slate-900/90 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
                           <p className="text-[10px] text-white leading-relaxed font-medium mb-3">{detail.summary}</p>
                           {detail.link && (
-                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-white text-slate-900 rounded-full text-[9px] font-black uppercase hover:bg-emerald-500 hover:text-white transition-colors">
+                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-white text-slate-900 rounded-full text-[9px] font-black uppercase hover:bg-emerald-500 hover:text-white transition-colors outline-none focus-visible:ring-2 focus-visible:ring-white">
                               Écouter 🎧
                             </a>
                           )}

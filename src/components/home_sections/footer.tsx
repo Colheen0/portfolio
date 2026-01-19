@@ -14,12 +14,12 @@ export const Footer = () => {
               <span className="text-indigo-600">DISCUTONS-EN.</span>
             </h2>
             <p className="text-slate-500 max-w-sm">
-              Ouvert aux opportunités en montage, création de contenus ou développement web.
+              Ouvert aux opportunités en montage, création de contenus.
             </p>
           </div>
           
           <a 
-            href="mailto:ton@email.com" 
+            href="mailto:colheenn@gmail.com" 
             className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-slate-900 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-indigo-600"
           >
             Me contacter par mail

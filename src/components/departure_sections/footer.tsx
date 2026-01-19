@@ -15,12 +15,12 @@ export const Footer = () => {
               <span className="text-indigo-500">DISCUTONS-EN.</span>
             </h2>
             <p className="text-slate-400 max-w-sm font-light">
-              Ouvert aux opportunités en montage, création de contenus ou développement web.
+              Ouvert aux opportunités en montage, création de contenus.
             </p>
           </div>
           
           <a 
-            href="mailto:ton@email.com" 
+            href="mailto:colheenn@gmail.com" 
             className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-indigo-600 font-pj rounded-full hover:bg-indigo-500 shadow-lg shadow-indigo-500/20"
           >
             Me contacter par mail

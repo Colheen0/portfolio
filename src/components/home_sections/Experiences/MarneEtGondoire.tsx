@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useRef } from 'react';
 
 interface VideoVignetteProps {
   title: string;
@@ -28,7 +29,9 @@ const vignetteVariants: Variants = {
 
 const VideoVignette = ({ title, videoUrl }: VideoVignetteProps) => {
   const videoId = getYoutubeId(videoUrl);
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  
+  // Utilisation de hqdefault pour éviter les erreurs 404 si la vidéo n'est pas en HD
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
     <motion.a 
@@ -43,9 +46,6 @@ const VideoVignette = ({ title, videoUrl }: VideoVignetteProps) => {
         src={thumbnailUrl} 
         alt={title}
         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-        onError={(e) => {
-          (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-        }}
       />
       
       <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
@@ -62,7 +62,20 @@ const VideoVignette = ({ title, videoUrl }: VideoVignetteProps) => {
 };
 
 export const MarneEtGondoire = () => {
-  // Variantes pour la cascade des vignettes
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Correction TypeScript : Vérification stricte de l'existence de l'élément
+  const scroll = (direction: 'left' | 'right') => {
+    const element = scrollRef.current;
+    if (element) {
+      const scrollAmount = 450;
+      element.scrollBy({ 
+        left: direction === 'left' ? -scrollAmount : scrollAmount, 
+        behavior: 'smooth' 
+      });
+    }
+  };
+
   const listVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -78,7 +91,7 @@ export const MarneEtGondoire = () => {
     <section id="marne-et-gondoire" className="py-24 px-6 bg-slate-50 border-y border-slate-200 overflow-hidden">
       <div className="max-w-5xl mx-auto">
         
-        {/* En-tête de la section animé */}
+        {/* En-tête de la section */}
         <motion.div 
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -99,19 +112,30 @@ export const MarneEtGondoire = () => {
           </h2>
           
           <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
-            Au sein du service communication de la Communauté d'Agglomération, j'ai produit des contenus audiovisuels pour valoriser le territoire. Mon rôle couvrait la captation et le montage adapté aux réseaux sociaux.
+            Au sein du service communication de la Communauté d'Agglomération, j'ai produit des contenus audiovisuels pour valoriser le territoire.
           </p>
         </motion.div>
 
-        {/* Zone de défilement horizontal animée */}
         <motion.div 
-          className="relative group"
+          className="relative"
           variants={listVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
         >
-          <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide scroll-smooth outline-none">
+          {/* Correction Style : hidden placé avant md:flex */}
+          <button 
+            onClick={() => scroll('left')}
+            className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white border border-slate-200 rounded-full hidden md:flex items-center justify-center shadow-lg cursor-pointer transition-all hover:bg-indigo-600 hover:text-white"
+            aria-label="Défiler à gauche"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+          </button>
+
+          <div 
+            ref={scrollRef} 
+            className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide scroll-smooth outline-none"
+          >
             <VideoVignette title="Soiré IA teaser" videoUrl="https://www.youtube.com/watch?v=Q_shsKeG7js" />
             <VideoVignette title="Événementiel : La Nuit de l'IA #2" videoUrl="https://www.youtube.com/watch?v=e-fd5LzKrrg" />
             <VideoVignette title="Lagny Play the game 2025" videoUrl="https://www.youtube.com/watch?v=SaPEHtDpG9g" />
@@ -119,9 +143,15 @@ export const MarneEtGondoire = () => {
             <VideoVignette title="Lagny La chasse aux œufs 2025" videoUrl="https://www.youtube.com/watch?v=gxWj5dfYKM8" />
             <VideoVignette title="Cérémonie du 8 Mai 1945" videoUrl="https://www.youtube.com/watch?v=JGuxagu_408" />
           </div>
+
+          <button 
+            onClick={() => scroll('right')}
+            className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white border border-slate-200 rounded-full hidden md:flex items-center justify-center shadow-lg cursor-pointer transition-all hover:bg-indigo-600 hover:text-white"
+            aria-label="Défiler à droite"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+          </button>
           
-          {/* Indicateur visuel discret pour le scroll */}
-          <div className="absolute right-0 top-0 bottom-8 w-24 bg-linear-to-l from-slate-50 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
         </motion.div>
       </div>
     </section>
