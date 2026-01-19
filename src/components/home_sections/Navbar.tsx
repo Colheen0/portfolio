@@ -17,7 +17,7 @@ export const Navbar = () => {
         {/* Logo / Brand - On garde celui-ci pour pouvoir remonter */}
         <span className="font-black tracking-tighter text-xl text-white z-50">
           <NavHashLink smooth to="/#accueil" onClick={closeAll}>
-            Accueil
+            Portfolio
           </NavHashLink>
         </span>
 

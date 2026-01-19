@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion"; // Importation de type obligatoire
+import type { Variants } from "framer-motion"; 
 
 export const Accueil = () => {
-  // Définition explicite des types Variants pour corriger l'erreur d'incompatibilité
+  
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Délai entre l'apparition de chaque ligne de texte
+        staggerChildren: 0.2, 
       },
     },
   };
@@ -20,7 +20,7 @@ export const Accueil = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Effet de lissage professionnel
+        ease: [0.16, 1, 0.3, 1],
       },
     },
   };
