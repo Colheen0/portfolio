@@ -8,7 +8,7 @@ export const Accueil = () => {
       {/* 1. L'IMAGE DE FOND ET OVERLAY CORRIGÉS */}
       <div className="absolute inset-0 z-0">
         <img 
-        src="assets/departure_img/departure_bg.jpg" 
+        src="assets/departure_img/departure_bg.png" 
         alt="Ambiance Departure" 
         className="w-full h-full object-cover object-[center_23%] opacity-50" 
         />
