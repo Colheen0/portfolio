@@ -87,7 +87,7 @@ export const Personnages = () => {
 
             <div className="relative group rounded-4xl overflow-hidden border border-white/10 shadow-2xl">
               <img
-                src="assets/departure_img/departure_bg.jpg"
+                src="assets/departure_img/departure_bg.png"
                 alt="Équipe complète"
                 className="w-full aspect-video object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-1000"              />
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 to-transparent opacity-60" />
