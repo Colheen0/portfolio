@@ -57,7 +57,7 @@ export const Moi = () => {
           
           {/* Bloc Identité */}
           <motion.div variants={itemVariants}>
-            <h2 className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.3em] mb-4 text-center md:text-left">Le Profil</h2>
+            <h2 className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.3em] mb-4 text-center md:text-left">Mon Profil</h2>
             <p className="text-3xl font-black text-slate-900 tracking-tighter leading-tight text-center md:text-left">
               COLHEEN <br /> NKODIA-DIABATÉ 
             </p>
