@@ -103,7 +103,7 @@ export const Other = () => {
             <span className="text-slate-400 text-sm font-medium">Tests & Expérimentations</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tighter uppercase leading-tight">Projets <br /> <span className="text-violet-600">Personnels</span></h2>
-          <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">Espace dédié à l'apprentissage autodidacte, aux tests de Motion Design et à la photographie.</p>
+          <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">Espace dédié à l'apprentissage autodidacte, aux tests de Motion Design à la photographie et autres.</p>
         </motion.div>
         
         <AfterEffectsSection scrollRef={aeScrollRef} handleScroll={handleScroll} setActiveVideo={setActiveVideo} containerVariants={containerVariants} itemVariants={itemVariants} />

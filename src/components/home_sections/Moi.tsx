@@ -78,7 +78,7 @@ export const Moi = () => {
           <motion.div variants={itemVariants}>
              <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium italic border-l-2 border-indigo-100 pl-4">
                Moi c'est Colheen je suis actuellement en 3ème année de BUT <strong>MMI</strong> (Metiers du multimédia et de l'internet) j'aime tout ce qui touche à la création notamment <strong>audiovisuel</strong> et <strong>l'écriture</strong>. 
-               Je cherche un emploie dans l'audiovisuel.
+               Je cherche un emploi dans l'audiovisuel.
             </p>
             
             <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest mb-8">Mon Parcours</h3>
