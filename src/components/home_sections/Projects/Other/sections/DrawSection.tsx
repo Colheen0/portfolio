@@ -16,6 +16,9 @@ export const DrawingsSection = ({ scrollRef, handleScroll, setActiveDrawing, con
     <motion.h3 className="text-sm font-black text-rose-500 uppercase tracking-[0.2em] mb-8 border-l-4 border-rose-500 pl-4">
       Dessins & Illustrations
     </motion.h3>
+    <p className="text-slate-500 text-sm mb-8 max-w-2xl leading-relaxed">
+     Je teste pleins de chose et le dessins en fait partie. J'aimerais transcrire ce que j'imagine sur papier mais c'est assez compliqué. Donc pour l'instant je reproduis ce que je vois, voici quelques croquis.
+    </p>
     <div className="relative">
       <button onClick={() => handleScroll(scrollRef, 'left')} className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white border border-slate-200 rounded-full hidden md:flex items-center justify-center shadow-lg cursor-pointer transition-all hover:bg-rose-500 hover:text-white outline-none focus-visible:ring-2 focus-visible:ring-rose-500" aria-label="Défiler à gauche">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>

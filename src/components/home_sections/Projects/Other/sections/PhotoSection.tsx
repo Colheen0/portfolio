@@ -17,6 +17,9 @@ export const PhotographySection = ({ scrollRef, handleScroll, setActiveAlbum, se
     <motion.h3 className="text-sm font-black text-emerald-500 uppercase tracking-[0.2em] mb-8 border-l-4 border-emerald-500 pl-4">
       Photographie (Albums)
     </motion.h3>
+    <p className="text-slate-500 text-sm mb-8 max-w-2xl leading-relaxed">
+     La photo c'est géniale, c'est un art que je trouve facinant, on peut rendre éternel n'importe quoi, mais c'est un art compliquer à maitriser, où on apprend à chaque nouvelle prise. Voici quelques uns de mes albums photos.
+    </p>
     <div className="relative">
       <button onClick={() => handleScroll(scrollRef, 'left')} className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white border border-slate-200 rounded-full hidden md:flex items-center justify-center shadow-lg cursor-pointer transition-all hover:bg-emerald-500 hover:text-white outline-none focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="Défiler à gauche">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>

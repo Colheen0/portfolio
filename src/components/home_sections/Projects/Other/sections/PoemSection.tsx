@@ -17,8 +17,7 @@ export const PoemsSection = ({ scrollRef, handleScroll, setActivePoem, container
       Plume & Poésie
     </motion.h3>
     <p className="text-slate-500 text-sm mb-8 max-w-2xl leading-relaxed">
-      Parce que la création ne s'arrête pas aux images, cette section regroupe mes écrits personnels. 
-      C'est ici que je laisse les mots prendre vie pour explorer des émotions plus abstraites.
+      Pourquoi de la poésie ? Comme vous avez dû le voir avec Departure j'aime écrire des histoires et la poésie est un excellent exercice pour apprendre à écrire de manière élégante et efficace. Donc je m'y suis mis ! Et voici quelques-uns de mes poèmes.
     </p>
     <div className="relative">
       <button onClick={() => handleScroll(scrollRef, 'left')} className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white border border-slate-200 rounded-full hidden md:flex items-center justify-center shadow-lg cursor-pointer transition-all hover:bg-amber-500 hover:text-white outline-none focus-visible:ring-2 focus-visible:ring-amber-500" aria-label="Défiler à gauche">

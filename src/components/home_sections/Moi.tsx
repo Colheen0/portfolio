@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion"; // Import type pour respecter ta règle stricte
+import type { Variants } from "framer-motion";
 
 export const Moi = () => {
-  // Variantes pour l'apparition en cascade des éléments de texte
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,7 +20,7 @@ export const Moi = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Easing fluide pro
+        ease: [0.16, 1, 0.3, 1], 
       },
     },
   };
@@ -79,7 +78,7 @@ export const Moi = () => {
           <motion.div variants={itemVariants}>
              <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium italic border-l-2 border-indigo-100 pl-4">
                Moi c'est Colheen je suis actuellement en 3ème année de BUT <strong>MMI</strong> (Metiers du multimédia et de l'internet) j'aime tout ce qui touche à la création notamment <strong>audiovisuel</strong> et <strong>l'écriture</strong>. 
-               Je cherche à construire des ponts entre la technique et l'émotion.
+               Je cherche un emploie dans l'audiovisuel.
             </p>
             
             <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest mb-8">Mon Parcours</h3>
