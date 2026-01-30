@@ -31,8 +31,8 @@ export const photoAlbums: PhotoAlbum[] = [
     images: [
       "assets/photos/potit_chat/chat.jpg", "assets/photos/potit_chat/chat2.jpg",
       "assets/photos/potit_chat/chat3.jpg", "assets/photos/potit_chat/chat4.jpg",
-      "assets/photos/potit_chat/chat5.png", "assets/photos/potit_chat/chat6.jpg",
-      "assets/photos/potit_chat/chat7.png", "assets/photos/potit_chat/chat8.png",
+      "assets/photos/potit_chat/chat5.jpg", "assets/photos/potit_chat/chat6.jpg",
+      "assets/photos/potit_chat/chat7.jpg", "assets/photos/potit_chat/chat8.jpg",
     ]
   },
   {
@@ -40,9 +40,9 @@ export const photoAlbums: PhotoAlbum[] = [
     category: "Photographie",
     cover: "assets/photos/ciel/avion.jpg",
     images: [
-      "assets/photos/ciel/jour.jpg", "assets/photos/ciel/jour1.jpg",
-      "assets/photos/ciel/jour2.jpg", "assets/photos/ciel/jour3.jpg",
-      "assets/photos/ciel/jour5.jpg", "assets/photos/ciel/avion.jpg",
+      "assets/photos/ciel/avion.jpg", "assets/photos/ciel/jour3.jpg",
+      "assets/photos/ciel/jour1.jpg", "assets/photos/ciel/jour2.jpg",
+      "assets/photos/ciel/jour.jpg", "assets/photos/ciel/jour5.jpg",
     ]
   },
   {
@@ -50,25 +50,25 @@ export const photoAlbums: PhotoAlbum[] = [
     category: "Photographie",
     cover: "assets/photos/asie_2024/asie10.jpg",
     images: [
-      "assets/photos/asie_2024/asie.jpg", "assets/photos/asie_2024/asie1.jpg",
+      "assets/photos/asie_2024/asie10.jpg", "assets/photos/asie_2024/asie1.jpg",
       "assets/photos/asie_2024/asie2.jpg", "assets/photos/asie_2024/asie3.jpg",
       "assets/photos/asie_2024/asie4.jpg", "assets/photos/asie_2024/asie5.jpg",
       "assets/photos/asie_2024/asie6.jpg", "assets/photos/asie_2024/asie7.jpg",
       "assets/photos/asie_2024/asie8.jpg", "assets/photos/asie_2024/asie9.jpg",
-      "assets/photos/asie_2024/asie10.jpg",
+      "assets/photos/asie_2024/asie.jpg",
     ]
   },
   {
     title: "Paris 2025",
     category: "Photographie",
-    cover: "assets/photos/paris_2025/paris10.png",
+    cover: "assets/photos/paris_2025/paris10.jpg",
     images: [
-      "assets/photos/paris_2025/paris.png", "assets/photos/paris_2025/paris1.png",
-      "assets/photos/paris_2025/paris2.png", "assets/photos/paris_2025/paris3.png",
-      "assets/photos/paris_2025/paris4.png", "assets/photos/paris_2025/paris5.png",
-      "assets/photos/paris_2025/paris6.png", "assets/photos/paris_2025/paris7.png",
-      "assets/photos/paris_2025/paris8.png", "assets/photos/paris_2025/paris9.png",
-      "assets/photos/paris_2025/paris10.png", "assets/photos/paris_2025/paris11.png",
+      "assets/photos/paris_2025/paris10.jpg", "assets/photos/paris_2025/paris1.jpg",
+      "assets/photos/paris_2025/paris2.jpg", "assets/photos/paris_2025/paris3.jpg",
+      "assets/photos/paris_2025/paris4.jpg", "assets/photos/paris_2025/paris5.jpg",
+      "assets/photos/paris_2025/paris6.jpg", "assets/photos/paris_2025/paris7.jpg",
+      "assets/photos/paris_2025/paris8.jpg", "assets/photos/paris_2025/paris9.jpg",
+      "assets/photos/paris_2025/paris.jpg", "assets/photos/paris_2025/paris11.jpg",
     ]
   }
 ];

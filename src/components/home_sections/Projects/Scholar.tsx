@@ -77,7 +77,7 @@ export const Scholar = () => {
       description: "Projet de fin de première année.",
       fullContent: "Une plateforme complète de réservation développée pour apprendre la gestion de base de données et les interactions utilisateurs complexes (réalisé en première année).",
       tags: ['Javascript', 'CSS', 'HTML'],
-      image: "assets/img/resakingdom.png",
+      image: "assets/img/resakingdom.jpg",
       link: "https://nkodiadiabate.butmmi.o2switch.site/resaweb/index.php"
     },
     {
@@ -85,7 +85,7 @@ export const Scholar = () => {
       description: "Expérience interactive en JS.",
       fullContent: "Une expérience interactive qui révèle ma personnalité à travers des animations fluides et un code créatif en JS (réalisé en première année).",
       tags: ['Javascript', 'CSS Anim'],
-      image: "assets/img/portrait-chinois.png",
+      image: "assets/img/portrait-chinois.jpg",
       link: "https://colheen0.github.io/Sae-105-Portrait-Chinois/"
     },
     {
@@ -101,7 +101,7 @@ export const Scholar = () => {
       description: "Cadrage et montage.",
       fullContent: "Réalisation d'un tournage en groupe où chacun avait un rôle différent moi j'était le cadreur puis j'ai fait le montage (réalisé en première année).",
       tags: ['Premiere pro', 'cadrage'],
-      image: "assets/img/interview.png",
+      image: "assets/img/interview.jpg",
       link: "https://youtu.be/dVMXyTlskA8"
     }
   ];

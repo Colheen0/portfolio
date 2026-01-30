@@ -74,17 +74,17 @@ export const Passions = () => {
       details: [
         { 
           name: "Percy Jackson & les Olympiens", 
-          image: "./assets/passions/percy_jackson.webp",
+          image: "./assets/passions/percy_jackson.jpg",
           summary: "Je suis un amoureux de la mythologie grecque ! Alors une série de livre qui l'adapte de nos jours ? C'était fait pour moi ! J'ai vraiment adoré cette série dans son intégralité même si je l'ai découvert à l'âge adulte j'ai replongé en enfance et j'y ai trouvé des choses qui m'ont profondément marqué."
         },
         { 
           name: "Les Héros de l'Olympe", 
-          image: "./assets/passions/les-heros-de-lolympe.webp",
+          image: "./assets/passions/les-heros-de-lolympe.jpg",
           summary: "Plus de personnage, plus de lore, plus de mythologie, c'est une super suite que j'ai lu directement après avoir finis les tomes de percy jackson et ça à super bien marché sur moi j'ai retrouvé des personnages et j'en ai découvert des nouveaux, vraiment merci Rick Riordan."
         },
         { 
           name: "Contes de Fées (Stephen King)", 
-          image: "./assets/passions/king-stephen-conte-de-fees.webp",
+          image: "./assets/passions/king-stephen-conte-de-fees.jpg",
           summary: "Mon tout premier livre du maitre Stephen King. C'est son titre qui m'a intrigué, Stephen King le maître de l'horreur qui écrit un conte de fée ? C'était bizarre et honnêtement le voyage ne m'a pas du tout décu j'ai adoré, c'est très touchant comme récit et ça sort un peu de l'horreur cosmique des classiques de King et c'est pas plus mal."
         }
       ],
@@ -99,19 +99,19 @@ export const Passions = () => {
       details: [
         { 
           name: "AJR", 
-          image: "./assets/passions/AJR.webp",
+          image: "./assets/passions/AJR.jpg",
           summary: "Je les ai découvert avec le film Soul de disney ils avaient fait une musique pour la bande annonce et la musique autant que le film m'ont marquer et depuis je les écoutes très régulièrement. Ils parlent de sujets qui touchent pas mal de gens dont moi et ça m'inspire beaucoup.",
           link: "https://spotify.com" 
         },
         { 
           name: "Megatera Zero", 
-          image: "./assets/passions/Mega.webp",
+          image: "./assets/passions/Mega.jpg",
           summary: "J'adore le japon et la musique en général et les groupes japonais sont vraiment à part : ça crie, ça hurle, ça parle de sujet simple mais avec tellement de puissance que ça en devient inspirant ça donne envie de chanter avec eux et Megatera Zero en est un parfait exemple.",
           link: "https://spotify.com"
         },
         { 
           name: "Lord Huron", 
-          image: "./assets/passions/Lord_Huron.webp",
+          image: "./assets/passions/Lord_Huron.jpg",
           summary: "Un peu comme AJR, Lord Huron c'est un artiste que j'ai découvert via une série (90% de mon spotify vient de série ou de tik tok) et là j'ai aussi été faciné comme pour AJR mais d'une manière différente : Lord Huron raconte des histoires dans ses musiques notamment l'album 'Lonesome dream' qui raconte une histoire d'amour et c'est super inspirant pour moi ça m'a montrer à quel points il y avait des manières différentes de raconter une histoire.",
           link: "https://spotify.com"
         }
@@ -127,17 +127,17 @@ export const Passions = () => {
       details: [
         { 
           name: "Hook", 
-          image: "./assets/passions/hook.webp",
+          image: "./assets/passions/hook.jpg",
           summary: "C'est un film TYPIQUE de mon enfance, à l'époque où tout était simple et beau je me rappelle de la musique et des visuels qui sont juste époustouflants. je l'ai regardé il n'y a pas très longtemps par nostalgie et quelle claque ! Il y a une scène qui m'a rappeler mon enfance c'est le moment où Peter retourne au pays imaginaire et là c'était comme une explosion dans ma tête, mon imagination qui bouillionais comme avant, ça m'a fait chaud au coeur." 
         },
         { 
           name: "New Girl", 
-          image: "./assets/passions/New_girl.webp",
+          image: "./assets/passions/New_girl.jpg",
           summary: "C'est ce genre de série qui ont fait le pont entre mon enfance et adolescence, quand j'était petit les blagues me faisait rire mais je ne comprenais pas, à l'adolescence ma vision à changé et j'ai pu vraiment comprendre et apprécier les dialogues et l'histoire, c'était pas seulement des situations comiques c'était des histoires sur des jeunes gens qui font face à la vie."
         },
         { 
           name: "The Flash", 
-          image: "./assets/passions/flash.webp",
+          image: "./assets/passions/flash.jpg",
           summary: "Flash est mon super-héro préféré et c'est en grande partie grâce à cette série c'est par elle que mon amour pour le lore et les univers complexes est né, c'est sur cette série que j'ai fait mes premières histoires et que je me suis rendu compte que j'adorais écrire." 
         }
       ],
