@@ -103,6 +103,22 @@ export const Scholar = () => {
       tags: ['Premiere pro', 'cadrage'],
       image: "assets/img/interview.jpg",
       link: "https://youtu.be/dVMXyTlskA8"
+    },
+    {
+      title: "Blog PHP",
+      description: "Développement d'un blog en PHP.",
+      fullContent: "Un blog simple, avec une base de données MySQL et un système d'authentification (réalisé en deuxième année).",
+      tags: ['PHP', 'MySQL', 'HTML', 'CSS'],
+      image: "assets/img/blog.png",
+      link: "https://blog.nkodiadiabate.butmmi.o2switch.site/blog/login.php"
+    },
+    {
+      title: "PersonaBattle jeu de combat en php",
+      description: "Jeu de combat développé en PHP.",
+      fullContent: "Un jeu de combat en PHP avec une base de données MySQL (réalisé en deuxième année).",
+      tags: ['PHP', 'MySQL'],
+      image: "assets/img/personabattle.png",
+      link: "https://personabattle.nkodiadiabate.butmmi.o2switch.site/PersonaBattle/interface/index.php?action=accueil"
     }
   ];
 

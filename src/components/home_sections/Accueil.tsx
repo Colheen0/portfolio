@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion"; 
+import { NavHashLink } from 'react-router-hash-link'; 
 
 export const Accueil = () => {
   
@@ -55,12 +56,12 @@ export const Accueil = () => {
             CODER.
           </motion.h1>
 
-          {/* Paragraphe */}
+          {/* Paragraphe avec lien Departure conforme RGAA */}
           <motion.p 
             variants={itemVariants} 
             className="text-lg md:text-xl text-slate-500 max-w-md leading-relaxed"
           >
-            Créatif hybride spécialisé dans le <strong>montage</strong> et le <strong>storytelling</strong>. Auteur de l'univers <em>Departure</em>.
+            Créatif hybride spécialisé dans le <strong>montage</strong> et le <strong>storytelling</strong>. Auteur de l'univers <NavHashLink smooth to="/departure#home" className="text-indigo-600 underline hover:text-indigo-800 transition-colors font-bold">Departure</NavHashLink>.
           </motion.p>
         </motion.div>
 
