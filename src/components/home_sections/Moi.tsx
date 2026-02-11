@@ -39,7 +39,7 @@ export const Moi = () => {
         >
           <div className="relative rounded-[2.5rem] overflow-hidden shadow-xl border-2 border-slate-100 max-w-sm mx-auto group">
             <img 
-              src="./assets/img/moi2.jpeg" // Correction du chemin relatif standard
+              src="./assets/img/moi2.png" 
               alt="Portrait Couleur"
               className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
             />

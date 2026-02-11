@@ -18,12 +18,12 @@ export const Portfolio = () => {
       <Accueil />
       <Moi />
       <Competences />
-      <Passions />
       <DepartureSection />
       <MarneEtGondoire />
       <CMJ />
       <Scholar />
       <Other />
+      <Passions />
       <Footer />
     </>
   );
